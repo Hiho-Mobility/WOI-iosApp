@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		390D34401900F871EDE0FB73 /* Pods_WOI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */; };
 		3F3C2A342343A5D70043CE67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2A332343A5D70043CE67 /* AppDelegate.swift */; };
 		3F3C2A362343A5D70043CE67 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2A352343A5D70043CE67 /* SceneDelegate.swift */; };
 		3F3C2A382343A5D70043CE67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3C2A372343A5D70043CE67 /* ViewController.swift */; };
 		3F3C2A3B2343A5D70043CE67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A392343A5D70043CE67 /* Main.storyboard */; };
 		3F3C2A3D2343A5D80043CE67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A3C2343A5D80043CE67 /* Assets.xcassets */; };
 		3F3C2A402343A5D80043CE67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A3E2343A5D80043CE67 /* LaunchScreen.storyboard */; };
+		3F3C2A482344E3E70043CE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		3F3C2A3C2343A5D80043CE67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3C2A3F2343A5D80043CE67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3C2A412343A5D80043CE67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E06A3F4711074B8CEEEEB0 /* Pods-WOI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.debug.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.debug.xcconfig"; sourceTree = "<group>"; };
+		B265F28328F58917E4071636 /* Pods-WOI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.release.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				390D34401900F871EDE0FB73 /* Pods_WOI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1800AC39B8CD7C2AE86478EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3F3C2A272343A5D60043CE67 = {
 			isa = PBXGroup;
 			children = (
 				3F3C2A322343A5D70043CE67 /* WOI */,
 				3F3C2A312343A5D70043CE67 /* Products */,
+				A5DE1E398801C410E7DED0F5 /* Pods */,
+				1800AC39B8CD7C2AE86478EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +80,19 @@
 				3F3C2A3C2343A5D80043CE67 /* Assets.xcassets */,
 				3F3C2A3E2343A5D80043CE67 /* LaunchScreen.storyboard */,
 				3F3C2A412343A5D80043CE67 /* Info.plist */,
+				3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */,
 			);
 			path = WOI;
+			sourceTree = "<group>";
+		};
+		A5DE1E398801C410E7DED0F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84E06A3F4711074B8CEEEEB0 /* Pods-WOI.debug.xcconfig */,
+				B265F28328F58917E4071636 /* Pods-WOI.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F3C2A442343A5D80043CE67 /* Build configuration list for PBXNativeTarget "WOI" */;
 			buildPhases = (
+				0C812CF866F88851E5BD35B1 /* [CP] Check Pods Manifest.lock */,
 				3F3C2A2C2343A5D70043CE67 /* Sources */,
 				3F3C2A2D2343A5D70043CE67 /* Frameworks */,
 				3F3C2A2E2343A5D70043CE67 /* Resources */,
+				CE5F78645B109D0A7087DE48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3C2A402343A5D80043CE67 /* LaunchScreen.storyboard in Resources */,
+				3F3C2A482344E3E70043CE67 /* GoogleService-Info.plist in Resources */,
 				3F3C2A3D2343A5D80043CE67 /* Assets.xcassets in Resources */,
 				3F3C2A3B2343A5D70043CE67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C812CF866F88851E5BD35B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WOI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE5F78645B109D0A7087DE48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOI/Pods-WOI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WOI/Pods-WOI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WOI/Pods-WOI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F3C2A2C2343A5D70043CE67 /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		3F3C2A452343A5D80043CE67 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84E06A3F4711074B8CEEEEB0 /* Pods-WOI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		3F3C2A462343A5D80043CE67 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B265F28328F58917E4071636 /* Pods-WOI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
