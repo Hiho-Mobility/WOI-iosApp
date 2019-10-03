@@ -13,19 +13,14 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     
     
     @IBOutlet var borderBox: UIView!
-    
     @IBOutlet var workOrderNumber: UITextField!
-    
-
     @IBOutlet var evaluatedTechnician: UITextField!
-    
     @IBOutlet var managerNameDropdown: UITextField!
-    
     @IBOutlet var whenDropdown: UITextField!
     
     var ref: DatabaseReference?
 
-
+    var homePage : homePageFields?
     
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
@@ -38,8 +33,12 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.homePage = homePageFields()
+        
         ref = Database.database().reference()
         navigationItem.title = "Work Order Inspections"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         
 
         borderBox.layer.borderWidth = 1
@@ -130,10 +129,43 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         ref?.child("Work Order: \(name)")
         
         print(workOrderNumber.text!)
-        ref?.child("Work Order: \(workOrderNumber.text)").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
+        ref?.child("Work Order: \(String(describing: workOrderNumber.text))").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
         
         presentingViewController?.dismiss(animated: true)
         
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        var pass = true
+        
+        if let workNum = workOrderNumber.text, workNum.count < 1{
+            pass = false
+            let ac = UIAlertController(title: "Wait a minute", message: "Don't forget a Work Order Number!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(ac, animated: true)
+                    }
+        if let manageName = managerNameDropdown.text, manageName.count < 1{
+            pass = false
+            let ac = UIAlertController(title: "Wait a minute", message: "Don't forget your name!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(ac, animated: true)
+        }
+        if let techName = evaluatedTechnician.text, techName.count < 1{
+            pass = false
+            let ac = UIAlertController(title: "Wait a minute", message: "Don't forget the technician's name!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(ac, animated: true)
+        }
+        if let whenText = whenDropdown.text, whenText.count < 1 {
+            pass = false
+            let ac = UIAlertController(title: "Wait a minute", message: "Don't forget when!", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(ac, animated: true)
+        }
+        
+        
+        return pass
     }
     
     
