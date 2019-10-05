@@ -124,11 +124,11 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     @IBAction func addCaseInfo(_ sender: Any) {
         
         guard let name = workOrderNumber.text else { return }
-        print(name)
+      
         
         ref?.child("Work Order: \(name)")
         
-        print(workOrderNumber.text!)
+       
         ref?.child("Work Order: \(String(describing: workOrderNumber.text))").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
         
         presentingViewController?.dismiss(animated: true)
