@@ -43,6 +43,7 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
 
         borderBox.layer.borderWidth = 1
         borderBox.layer.borderColor = UIColor.gray.cgColor
+        borderBox.layer.cornerRadius = 5
         self.hideKeyboardWhenTappedAround()
         
     }

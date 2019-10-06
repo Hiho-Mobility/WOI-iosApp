@@ -18,6 +18,8 @@ class firstPage: UIViewController {
     @IBOutlet var nextButton: UIButton!
     
     var firstButtonClick = false
+    var paragraphStrings = [String]()
+    
     
     var huss : String = ""
     
@@ -27,17 +29,16 @@ class firstPage: UIViewController {
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
         
-        yesBorderBox.layer.borderWidth = 1
-        yesBorderBox.layer.borderColor = UIColor.black.cgColor
+        yesBorderBox.layer.borderWidth = 2
+        yesBorderBox.layer.borderColor = UIColor.gray.cgColor
+        yesBorderBox.layer.cornerRadius = 5
+        
         
       
         dropDown.optionArray = ["YES", "NO" ,"N/A"]
         dropDown.optionIds = [1,2,3]
         
-        dropDown.didSelect{(selectedText , index ,id) in
-        self.firstParagraph.text = "Selected String: \(selectedText) \n index: \(index) and id: \(id)"
-            }
-        
+
         
         huss = "HAHHAAHA"
        dropDown.didSelect{
@@ -59,6 +60,7 @@ class firstPage: UIViewController {
           
       }
     
+
     
     
     
