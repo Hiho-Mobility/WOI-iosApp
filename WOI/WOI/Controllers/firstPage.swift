@@ -10,9 +10,13 @@ import UIKit
 import iOSDropDown
 
 class firstPage: UIViewController {
-
+    
+    
     
     @IBOutlet var firstParagraph: UILabel!
+    @IBOutlet var secondParagraph: UILabel!
+    @IBOutlet var thirdParagraph: UILabel!
+
     @IBOutlet var dropDown: DropDown!
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
@@ -60,7 +64,22 @@ class firstPage: UIViewController {
           
       }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let fontSize1 = self.firstParagraph.getFontSizeForLabel()
+        let fontSize2 = self.secondParagraph.getFontSizeForLabel()
+        let fontSize3 = self.thirdParagraph.getFontSizeForLabel()
 
+        let smallestFontSize = min(min(fontSize1, fontSize2), fontSize3)
+
+        self.firstParagraph.font = self.firstParagraph.font.withSize(smallestFontSize)
+        self.secondParagraph.font = self.secondParagraph.font.withSize(smallestFontSize)
+        self.thirdParagraph.font = self.thirdParagraph.font.withSize(smallestFontSize)
+
+        self.firstParagraph.adjustsFontSizeToFitWidth = false
+        self.secondParagraph.adjustsFontSizeToFitWidth = false
+        self.thirdParagraph.adjustsFontSizeToFitWidth = false
+    }
     
     
     
@@ -81,4 +100,16 @@ class firstPage: UIViewController {
     
 
 
+}
+
+extension UILabel {
+    func getFontSizeForLabel() -> CGFloat {
+        let text: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
+        text.setAttributes([NSAttributedString.Key.font: self.font], range: NSMakeRange(0, text.length))
+        let context: NSStringDrawingContext = NSStringDrawingContext()
+        context.minimumScaleFactor = self.minimumScaleFactor
+        text.boundingRect(with: self.frame.size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: context)
+        let adjustedFontSize: CGFloat = self.font.pointSize * context.actualScaleFactor
+        return adjustedFontSize
+    }
 }
