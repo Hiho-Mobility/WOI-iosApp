@@ -18,6 +18,7 @@
 		3F5FA054234677CA00C2E14F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA053234677CA00C2E14F /* ViewController.swift */; };
 		3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA055234677D800C2E14F /* homePageFields.swift */; };
 		3F6462982347A529005C8C57 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6462972347A529005C8C57 /* iOSDropDown.framework */; };
+		3F64629C234A6FC8005C8C57 /* tryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64629B234A6FC8005C8C57 /* tryPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		3F5FA053234677CA00C2E14F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F5FA055234677D800C2E14F /* homePageFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageFields.swift; sourceTree = "<group>"; };
 		3F6462972347A529005C8C57 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F64629B234A6FC8005C8C57 /* tryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tryPage.swift; sourceTree = "<group>"; };
 		6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E06A3F4711074B8CEEEEB0 /* Pods-WOI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.debug.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.debug.xcconfig"; sourceTree = "<group>"; };
 		B265F28328F58917E4071636 /* Pods-WOI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.release.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				3F5FA053234677CA00C2E14F /* ViewController.swift */,
 				3F5FA0512346758F00C2E14F /* firstPage.swift */,
+				3F64629B234A6FC8005C8C57 /* tryPage.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F64629C234A6FC8005C8C57 /* tryPage.swift in Sources */,
 				3F5FA054234677CA00C2E14F /* ViewController.swift in Sources */,
 				3F3C2A342343A5D70043CE67 /* AppDelegate.swift in Sources */,
 				3F3C2A362343A5D70043CE67 /* SceneDelegate.swift in Sources */,
