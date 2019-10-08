@@ -9,7 +9,7 @@
 import UIKit
 import iOSDropDown
 
-class firstPage: UIViewController {
+class firstYesPage: UIViewController {
     
     
     
@@ -21,6 +21,9 @@ class firstPage: UIViewController {
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
     
+
+    
+    
     var firstButtonClick = false
     var paragraphStrings = [String]()
     
@@ -30,13 +33,13 @@ class firstPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
         
         yesBorderBox.layer.borderWidth = 2
         yesBorderBox.layer.borderColor = UIColor.gray.cgColor
         yesBorderBox.layer.cornerRadius = 5
-        
         
       
         dropDown.optionArray = ["YES", "NO" ,"N/A"]
@@ -54,16 +57,17 @@ class firstPage: UIViewController {
             
         }
         else if selectedText == "NO"{
-             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                            let firstViewController = storyBoard.instantiateViewController(withIdentifier: "tryPage")
-            //                self.dismiss(animated: false, completion: nil)
-            //                self.view.addSubview(firstViewController.view)
-                            self.navigationController?.pushViewController(firstViewController, animated: false)
-            print("HUssien")
-            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let tryPageController = storyBoard.instantiateViewController(withIdentifier: "tryPage")
+            self.navigationController?.pushViewController(tryPageController, animated: false)
+            self.nextButton.isEnabled = false
         }
         else{
             self.nextButton.isEnabled = false
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
+
+            self.navigationController?.pushViewController(firstNAPageController, animated: false)
         }
         
         }
@@ -78,7 +82,6 @@ class firstPage: UIViewController {
       }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         let fontSize1 = self.firstParagraph.getFontSizeForLabel()
         let fontSize2 = self.secondParagraph.getFontSizeForLabel()
         let fontSize3 = self.thirdParagraph.getFontSizeForLabel()
