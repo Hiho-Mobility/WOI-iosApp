@@ -48,8 +48,21 @@ class firstPage: UIViewController {
        dropDown.didSelect{
            (selectedText , index ,id) in
         if selectedText == "YES"{
+            
+            
             self.nextButton.isEnabled = true
-        }else{
+            
+        }
+        else if selectedText == "NO"{
+             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                            let firstViewController = storyBoard.instantiateViewController(withIdentifier: "tryPage")
+            //                self.dismiss(animated: false, completion: nil)
+            //                self.view.addSubview(firstViewController.view)
+                            self.navigationController?.pushViewController(firstViewController, animated: false)
+            print("HUssien")
+            
+        }
+        else{
             self.nextButton.isEnabled = false
         }
         
