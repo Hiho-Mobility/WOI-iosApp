@@ -1,17 +1,15 @@
 //
-//  firstPage.swift
+//  firstBasePage.swift
 //  WOI
 //
-//  Created by Hussein Nagri on 2019-10-02.
+//  Created by Hussein Nagri on 2019-10-08.
 //  Copyright © 2019 Hussein Nagri. All rights reserved.
 //
 
 import UIKit
 import iOSDropDown
-import Firebase
 
-class firstYesPage: UIViewController {
-    
+class firstBasePage: UIViewController {
     
     
     @IBOutlet var firstParagraph: UILabel!
@@ -41,7 +39,7 @@ class firstYesPage: UIViewController {
         yesBorderBox.layer.borderColor = UIColor.gray.cgColor
         yesBorderBox.layer.cornerRadius = 5
        
-        self.nextButton.isEnabled = true
+        
         
         
         
@@ -56,7 +54,11 @@ class firstYesPage: UIViewController {
         dropDown.didSelect{
            (selectedText , index ,id) in
         if selectedText == "YES"{
-            self.nextButton.isEnabled = true
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstYesPageController = storyBoard.instantiateViewController(withIdentifier: "firstYesPage")
+            
+            self.navigationController?.pushViewController(firstYesPageController, animated: false)
+            
             
         }
         else if selectedText == "NO"{
@@ -100,20 +102,5 @@ class firstYesPage: UIViewController {
         self.secondParagraph.adjustsFontSizeToFitWidth = false
         self.thirdParagraph.adjustsFontSizeToFitWidth = false
     }
+}
     
-        
-
-
-}
-
-extension UILabel {
-    func getFontSizeForLabel() -> CGFloat {
-        let text: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
-        text.setAttributes([NSAttributedString.Key.font: self.font!], range: NSMakeRange(0, text.length))
-        let context: NSStringDrawingContext = NSStringDrawingContext()
-        context.minimumScaleFactor = self.minimumScaleFactor
-        text.boundingRect(with: self.frame.size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: context)
-        let adjustedFontSize: CGFloat = self.font.pointSize * context.actualScaleFactor
-        return adjustedFontSize
-    }
-}

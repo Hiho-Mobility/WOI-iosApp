@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
+class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
     
     @IBOutlet var borderBox: UIView!
@@ -178,13 +178,13 @@ class HomepageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
 
 
 extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
+     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
 
-    @objc func dismissKeyboard() {
+    @objc  func dismissKeyboard() {
         view.endEditing(true)
     }
 }

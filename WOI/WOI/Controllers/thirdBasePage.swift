@@ -1,19 +1,15 @@
 //
-//  firstPage.swift
+//  thirdBasePage.swift
 //  WOI
 //
-//  Created by Hussein Nagri on 2019-10-02.
+//  Created by Hussein Nagri on 2019-10-08.
 //  Copyright © 2019 Hussein Nagri. All rights reserved.
 //
 
 import UIKit
 import iOSDropDown
-import Firebase
 
-class firstYesPage: UIViewController {
-    
-    
-    
+class thirdBasePage:UIViewController {
     @IBOutlet var firstParagraph: UILabel!
     @IBOutlet var secondParagraph: UILabel!
     @IBOutlet var thirdParagraph: UILabel!
@@ -41,7 +37,7 @@ class firstYesPage: UIViewController {
         yesBorderBox.layer.borderColor = UIColor.gray.cgColor
         yesBorderBox.layer.cornerRadius = 5
        
-        self.nextButton.isEnabled = true
+        
         
         
         
@@ -56,22 +52,26 @@ class firstYesPage: UIViewController {
         dropDown.didSelect{
            (selectedText , index ,id) in
         if selectedText == "YES"{
-            self.nextButton.isEnabled = true
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let thirdYesPageController = storyBoard.instantiateViewController(withIdentifier: "thirdYesPage")
+            
+            self.navigationController?.pushViewController(thirdYesPageController, animated: false)
+            
             
         }
         else if selectedText == "NO"{
             self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
-            self.navigationController?.pushViewController(firstNoPageController, animated: false)
+            let thirdNoPageController = storyBoard.instantiateViewController(withIdentifier: "thirdNoPage")
+            self.navigationController?.pushViewController(thirdNoPageController, animated: false)
            
         }
         else{
             self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
+            let thirdNAPageController = storyBoard.instantiateViewController(withIdentifier: "thirdNAPage")
 
-            self.navigationController?.pushViewController(firstNAPageController, animated: false)
+            self.navigationController?.pushViewController(thirdNAPageController, animated: false)
         }
         
         }
@@ -99,21 +99,5 @@ class firstYesPage: UIViewController {
         self.firstParagraph.adjustsFontSizeToFitWidth = false
         self.secondParagraph.adjustsFontSizeToFitWidth = false
         self.thirdParagraph.adjustsFontSizeToFitWidth = false
-    }
-    
-        
-
-
-}
-
-extension UILabel {
-    func getFontSizeForLabel() -> CGFloat {
-        let text: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
-        text.setAttributes([NSAttributedString.Key.font: self.font!], range: NSMakeRange(0, text.length))
-        let context: NSStringDrawingContext = NSStringDrawingContext()
-        context.minimumScaleFactor = self.minimumScaleFactor
-        text.boundingRect(with: self.frame.size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: context)
-        let adjustedFontSize: CGFloat = self.font.pointSize * context.actualScaleFactor
-        return adjustedFontSize
     }
 }

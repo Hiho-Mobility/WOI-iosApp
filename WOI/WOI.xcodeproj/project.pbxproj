@@ -15,11 +15,20 @@
 		3F3C2A402343A5D80043CE67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A3E2343A5D80043CE67 /* LaunchScreen.storyboard */; };
 		3F3C2A482344E3E70043CE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */; };
 		3F5FA0522346758F00C2E14F /* firstYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA0512346758F00C2E14F /* firstYesPage.swift */; };
-		3F5FA054234677CA00C2E14F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA053234677CA00C2E14F /* ViewController.swift */; };
+		3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA053234677CA00C2E14F /* homePageController.swift */; };
 		3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA055234677D800C2E14F /* homePageFields.swift */; };
-		3F6462982347A529005C8C57 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6462972347A529005C8C57 /* iOSDropDown.framework */; };
-		3F64629C234A6FC8005C8C57 /* tryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64629B234A6FC8005C8C57 /* tryPage.swift */; };
+		3F64629C234A6FC8005C8C57 /* firstNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64629B234A6FC8005C8C57 /* firstNoPage.swift */; };
+		3F7C5139234D540200EF2055 /* firstBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C5138234D540200EF2055 /* firstBasePage.swift */; };
+		3F7C513B234D611E00EF2055 /* secondBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C513A234D611E00EF2055 /* secondBasePage.swift */; };
+		3F7C513D234D61AC00EF2055 /* secondYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C513C234D61AC00EF2055 /* secondYesPage.swift */; };
+		3F8B6E47234D8AC300071C40 /* thirdBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B6E46234D8AC300071C40 /* thirdBasePage.swift */; };
+		3F8B6E49234D8C5A00071C40 /* thirdYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */; };
+		3F8B6E4B234D8CC600071C40 /* thirdNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B6E4A234D8CC600071C40 /* thirdNoPage.swift */; };
+		3F8B6E4D234D8D0C00071C40 /* thirdNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */; };
 		3FA3A50F234D2ADA00AC71F4 /* firstNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */; };
+		3FA3A517234D350800AC71F4 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3A516234D350800AC71F4 /* iOSDropDown.framework */; };
+		3FF88753234D6530007646FE /* secondNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88752234D6530007646FE /* secondNoPage.swift */; };
+		3FF88755234D659F007646FE /* secondNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88754234D659F007646FE /* secondNAPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,11 +41,20 @@
 		3F3C2A412343A5D80043CE67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3F5FA0512346758F00C2E14F /* firstYesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstYesPage.swift; sourceTree = "<group>"; };
-		3F5FA053234677CA00C2E14F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F5FA053234677CA00C2E14F /* homePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageController.swift; sourceTree = "<group>"; };
 		3F5FA055234677D800C2E14F /* homePageFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageFields.swift; sourceTree = "<group>"; };
-		3F6462972347A529005C8C57 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F64629B234A6FC8005C8C57 /* tryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tryPage.swift; sourceTree = "<group>"; };
+		3F64629B234A6FC8005C8C57 /* firstNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNoPage.swift; sourceTree = "<group>"; };
+		3F7C5138234D540200EF2055 /* firstBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstBasePage.swift; sourceTree = "<group>"; };
+		3F7C513A234D611E00EF2055 /* secondBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondBasePage.swift; sourceTree = "<group>"; };
+		3F7C513C234D61AC00EF2055 /* secondYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondYesPage.swift; sourceTree = "<group>"; };
+		3F8B6E46234D8AC300071C40 /* thirdBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdBasePage.swift; sourceTree = "<group>"; };
+		3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdYesPage.swift; sourceTree = "<group>"; };
+		3F8B6E4A234D8CC600071C40 /* thirdNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdNoPage.swift; sourceTree = "<group>"; };
+		3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdNAPage.swift; sourceTree = "<group>"; };
 		3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNAPage.swift; sourceTree = "<group>"; };
+		3FA3A516234D350800AC71F4 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF88752234D6530007646FE /* secondNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondNoPage.swift; sourceTree = "<group>"; };
+		3FF88754234D659F007646FE /* secondNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondNAPage.swift; sourceTree = "<group>"; };
 		6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E06A3F4711074B8CEEEEB0 /* Pods-WOI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.debug.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.debug.xcconfig"; sourceTree = "<group>"; };
 		B265F28328F58917E4071636 /* Pods-WOI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WOI.release.xcconfig"; path = "Target Support Files/Pods-WOI/Pods-WOI.release.xcconfig"; sourceTree = "<group>"; };
@@ -47,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F6462982347A529005C8C57 /* iOSDropDown.framework in Frameworks */,
+				3FA3A517234D350800AC71F4 /* iOSDropDown.framework in Frameworks */,
 				390D34401900F871EDE0FB73 /* Pods_WOI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,7 +76,7 @@
 		1800AC39B8CD7C2AE86478EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3F6462972347A529005C8C57 /* iOSDropDown.framework */,
+				3FA3A516234D350800AC71F4 /* iOSDropDown.framework */,
 				6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */,
 			);
 			name = Frameworks;
@@ -101,10 +119,19 @@
 		3F5FA04F23463B6B00C2E14F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3F5FA053234677CA00C2E14F /* ViewController.swift */,
+				3F5FA053234677CA00C2E14F /* homePageController.swift */,
 				3F5FA0512346758F00C2E14F /* firstYesPage.swift */,
-				3F64629B234A6FC8005C8C57 /* tryPage.swift */,
+				3F64629B234A6FC8005C8C57 /* firstNoPage.swift */,
 				3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */,
+				3F7C5138234D540200EF2055 /* firstBasePage.swift */,
+				3F7C513A234D611E00EF2055 /* secondBasePage.swift */,
+				3F7C513C234D61AC00EF2055 /* secondYesPage.swift */,
+				3FF88752234D6530007646FE /* secondNoPage.swift */,
+				3FF88754234D659F007646FE /* secondNAPage.swift */,
+				3F8B6E46234D8AC300071C40 /* thirdBasePage.swift */,
+				3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */,
+				3F8B6E4A234D8CC600071C40 /* thirdNoPage.swift */,
+				3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,12 +269,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F64629C234A6FC8005C8C57 /* tryPage.swift in Sources */,
-				3F5FA054234677CA00C2E14F /* ViewController.swift in Sources */,
+				3FF88753234D6530007646FE /* secondNoPage.swift in Sources */,
+				3FF88755234D659F007646FE /* secondNAPage.swift in Sources */,
+				3F64629C234A6FC8005C8C57 /* firstNoPage.swift in Sources */,
+				3F8B6E4D234D8D0C00071C40 /* thirdNAPage.swift in Sources */,
+				3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */,
 				3F3C2A342343A5D70043CE67 /* AppDelegate.swift in Sources */,
 				3F3C2A362343A5D70043CE67 /* SceneDelegate.swift in Sources */,
+				3F8B6E49234D8C5A00071C40 /* thirdYesPage.swift in Sources */,
+				3F8B6E47234D8AC300071C40 /* thirdBasePage.swift in Sources */,
+				3F7C513D234D61AC00EF2055 /* secondYesPage.swift in Sources */,
+				3F8B6E4B234D8CC600071C40 /* thirdNoPage.swift in Sources */,
+				3F7C513B234D611E00EF2055 /* secondBasePage.swift in Sources */,
 				3FA3A50F234D2ADA00AC71F4 /* firstNAPage.swift in Sources */,
 				3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */,
+				3F7C5139234D540200EF2055 /* firstBasePage.swift in Sources */,
 				3F5FA0522346758F00C2E14F /* firstYesPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

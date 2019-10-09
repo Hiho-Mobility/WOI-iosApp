@@ -1,5 +1,5 @@
 //
-//  firstNAPage.swift
+//  thirdNAPage.swift
 //  WOI
 //
 //  Created by Hussein Nagri on 2019-10-08.
@@ -9,7 +9,7 @@
 import UIKit
 import iOSDropDown
 
-class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     @IBOutlet var naBorderBox: UIView!
     
@@ -57,24 +57,20 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
            (selectedText , index ,id) in
         if selectedText == "YES"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstYesPageController = storyBoard.instantiateViewController(withIdentifier: "firstYesPage")
-            self.navigationController?.pushViewController(firstYesPageController, animated: false)
+            let thirdYesPageController = storyBoard.instantiateViewController(withIdentifier: "thirdYesPage")
+            self.navigationController?.pushViewController(thirdYesPageController, animated: false)
             
         }
         else if selectedText == "NO"{
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
-            self.navigationController?.pushViewController(firstNoPageController, animated: false)
+            let thirdNoPageController = storyBoard.instantiateViewController(withIdentifier: "thirdNoPage")
+            self.navigationController?.pushViewController(thirdNoPageController, animated: false)
 
            
         }
         else{
-       //     self.nextButton.isEnabled = false
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
-
-            self.navigationController?.pushViewController(firstNAPageController, animated: false)
+            print("")
         }
         
         }
