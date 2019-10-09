@@ -14,6 +14,10 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet var firstButton: UIButton!
     @IBOutlet var secondButton: UIButton!
     @IBOutlet var thirdButton: UIButton!
+    @IBOutlet var fourtButton: UIButton!
+    @IBOutlet var fifthButton: UIButton!
+    
+    
     
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
@@ -23,6 +27,14 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet var firstPara: UILabel!
     @IBOutlet var secondPara: UILabel!
     @IBOutlet var thirdPara: UILabel!
+    @IBOutlet var forthPara: UILabel!
+    @IBOutlet var cautionPara: UILabel!
+    @IBOutlet var fifthPara: UILabel!
+    
+    
+    
+    
+    
     
     @IBOutlet var dropDown: DropDown!
     @IBOutlet var additionalCommentsBox: UITextView!
@@ -34,6 +46,8 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     var firstButtonClick = false
     var secondButtonClick = false
     var thirdButtonClick = false
+    var fourthButtonClick = false
+    var fifthButtonClick = false
     
     var imageSelected = [false, false, false]
     
@@ -53,8 +67,9 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         noBorderBox.layer.borderColor = UIColor.gray.cgColor
         noBorderBox.layer.cornerRadius = 5
         
-      
-        
+        cautionPara.layer.borderColor = UIColor.gray.cgColor
+        cautionPara.layer.borderWidth = 1
+        cautionPara.layer.cornerRadius = 5
         
         
         
@@ -103,10 +118,10 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     }
     
     func enableNext() -> Void {
-        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
+        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true || fourthButtonClick == true || fifthButtonClick == true {
              self.nextButton.isEnabled = true
         }else{
-               self.nextButton.isEnabled = false
+            self.nextButton.isEnabled = false
         }
         
     }
@@ -148,6 +163,31 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
        }else{
            thirdButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            thirdButtonClick = !thirdButtonClick
+           enableNext()
+       }
+    }
+    
+    @IBAction func fourtButtonPressed(_ sender: Any) {
+        if fourthButtonClick == true{
+           fourtButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
+           fourthButtonClick = !fourthButtonClick
+           enableNext()
+       }else{
+           fourtButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
+           fourthButtonClick = !fourthButtonClick
+           enableNext()
+       }
+    }
+    
+    @IBAction func fifthButtonPressed(_ sender: Any) {
+        
+        if fifthButtonClick == true{
+           fifthButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
+           fifthButtonClick = !fifthButtonClick
+           enableNext()
+       }else{
+           fifthButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
+           fifthButtonClick = !fifthButtonClick
            enableNext()
        }
     }
@@ -230,19 +270,31 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         let fontSize1 = self.firstPara.getFontSizeForLabel()
         let fontSize2 = self.secondPara.getFontSizeForLabel()
         let fontSize3 = self.thirdPara.getFontSizeForLabel()
-
+        let fontSize4 = self.forthPara.getFontSizeForLabel()
+        let fontSize5 = self.cautionPara.getFontSizeForLabel()
+        let fontSize6 = self.fifthPara.getFontSizeForLabel()
+        
+        
         print(fontSize1)
         print(fontSize2)
         print(fontSize3)
-        let smallestFontSize = min(min(fontSize1, fontSize2), fontSize3)
+        let smallestFontSize = min(min(min(min(min(fontSize1, fontSize2), fontSize3), fontSize4), fontSize5), fontSize6)
 
         self.firstPara.font = self.firstPara.font.withSize(smallestFontSize)
         self.secondPara.font = self.secondPara.font.withSize(smallestFontSize)
         self.thirdPara.font = self.thirdPara.font.withSize(smallestFontSize)
-
+        self.forthPara.font = self.forthPara.font.withSize(smallestFontSize)
+        self.cautionPara.font = self.cautionPara.font.withSize(smallestFontSize)
+        self.fifthPara.font = self.fifthPara.font.withSize(smallestFontSize)
+        
+        
+        
         self.firstPara.adjustsFontSizeToFitWidth = false
         self.secondPara.adjustsFontSizeToFitWidth = false
         self.thirdPara.adjustsFontSizeToFitWidth = false
+        self.forthPara.adjustsFontSizeToFitWidth = false
+        self.cautionPara.adjustsFontSizeToFitWidth = false
+        self.fifthPara.adjustsFontSizeToFitWidth = false
         
         
  

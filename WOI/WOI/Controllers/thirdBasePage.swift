@@ -13,7 +13,9 @@ class thirdBasePage:UIViewController {
     @IBOutlet var firstParagraph: UILabel!
     @IBOutlet var secondParagraph: UILabel!
     @IBOutlet var thirdParagraph: UILabel!
-
+    @IBOutlet var fourthParagraph: UILabel!
+    @IBOutlet var fifthParagraph: UILabel!
+    
     @IBOutlet var dropDown: DropDown!
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
@@ -89,15 +91,23 @@ class thirdBasePage:UIViewController {
         let fontSize1 = self.firstParagraph.getFontSizeForLabel()
         let fontSize2 = self.secondParagraph.getFontSizeForLabel()
         let fontSize3 = self.thirdParagraph.getFontSizeForLabel()
+        let fontSize4 = self.fourthParagraph.getFontSizeForLabel()
+        let fontSize5 = self.fifthParagraph.getFontSizeForLabel()
 
-        let smallestFontSize = min(min(fontSize1, fontSize2), fontSize3)
+        let smallestFontSize = min(min(min(min(fontSize1, fontSize2), fontSize3), fontSize4), fontSize5)
 
         self.firstParagraph.font = self.firstParagraph.font.withSize(smallestFontSize)
         self.secondParagraph.font = self.secondParagraph.font.withSize(smallestFontSize)
         self.thirdParagraph.font = self.thirdParagraph.font.withSize(smallestFontSize)
+        self.fourthParagraph.font = self.fourthParagraph.font.withSize(smallestFontSize)
+        self.fifthParagraph.font = self.fifthParagraph.font.withSize(smallestFontSize)
 
         self.firstParagraph.adjustsFontSizeToFitWidth = false
         self.secondParagraph.adjustsFontSizeToFitWidth = false
         self.thirdParagraph.adjustsFontSizeToFitWidth = false
+        self.fourthParagraph.adjustsFontSizeToFitWidth = false
+        self.fifthParagraph.adjustsFontSizeToFitWidth = false
     }
+    
+     
 }
