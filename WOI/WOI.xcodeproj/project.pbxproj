@@ -14,6 +14,18 @@
 		3F3C2A3D2343A5D80043CE67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A3C2343A5D80043CE67 /* Assets.xcassets */; };
 		3F3C2A402343A5D80043CE67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A3E2343A5D80043CE67 /* LaunchScreen.storyboard */; };
 		3F3C2A482344E3E70043CE67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */; };
+		3F5EBEA6234E19BC001A1FEF /* fourthBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEA5234E19BC001A1FEF /* fourthBasePage.swift */; };
+		3F5EBEA8234E1C64001A1FEF /* fourthYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEA7234E1C64001A1FEF /* fourthYesPage.swift */; };
+		3F5EBEAA234E1EBB001A1FEF /* fourthNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEA9234E1EBB001A1FEF /* fourthNoPage.swift */; };
+		3F5EBEAC234E20D8001A1FEF /* fourthNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEAB234E20D8001A1FEF /* fourthNAPage.swift */; };
+		3F5EBEAE234E2374001A1FEF /* fifthBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEAD234E2374001A1FEF /* fifthBasePage.swift */; };
+		3F5EBEB0234E25C3001A1FEF /* fifthYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEAF234E25C3001A1FEF /* fifthYesPage.swift */; };
+		3F5EBEB2234E2949001A1FEF /* fifthNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB1234E2949001A1FEF /* fifthNoPage.swift */; };
+		3F5EBEB4234E2B7F001A1FEF /* fifthNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB3234E2B7F001A1FEF /* fifthNAPage.swift */; };
+		3F5EBEB6234E3AE7001A1FEF /* sixthBasePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB5234E3AE7001A1FEF /* sixthBasePage.swift */; };
+		3F5EBEB8234E3B27001A1FEF /* sixthYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */; };
+		3F5EBEBA234E3B55001A1FEF /* sixthNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */; };
+		3F5EBEBC234E3B91001A1FEF /* sixthNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */; };
 		3F5FA0522346758F00C2E14F /* firstYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA0512346758F00C2E14F /* firstYesPage.swift */; };
 		3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA053234677CA00C2E14F /* homePageController.swift */; };
 		3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA055234677D800C2E14F /* homePageFields.swift */; };
@@ -40,6 +52,18 @@
 		3F3C2A3F2343A5D80043CE67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3C2A412343A5D80043CE67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3C2A472344E3E60043CE67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3F5EBEA5234E19BC001A1FEF /* fourthBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthBasePage.swift; sourceTree = "<group>"; };
+		3F5EBEA7234E1C64001A1FEF /* fourthYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthYesPage.swift; sourceTree = "<group>"; };
+		3F5EBEA9234E1EBB001A1FEF /* fourthNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthNoPage.swift; sourceTree = "<group>"; };
+		3F5EBEAB234E20D8001A1FEF /* fourthNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourthNAPage.swift; sourceTree = "<group>"; };
+		3F5EBEAD234E2374001A1FEF /* fifthBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthBasePage.swift; sourceTree = "<group>"; };
+		3F5EBEAF234E25C3001A1FEF /* fifthYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthYesPage.swift; sourceTree = "<group>"; };
+		3F5EBEB1234E2949001A1FEF /* fifthNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthNoPage.swift; sourceTree = "<group>"; };
+		3F5EBEB3234E2B7F001A1FEF /* fifthNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fifthNAPage.swift; sourceTree = "<group>"; };
+		3F5EBEB5234E3AE7001A1FEF /* sixthBasePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthBasePage.swift; sourceTree = "<group>"; };
+		3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthYesPage.swift; sourceTree = "<group>"; };
+		3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthNoPage.swift; sourceTree = "<group>"; };
+		3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthNAPage.swift; sourceTree = "<group>"; };
 		3F5FA0512346758F00C2E14F /* firstYesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstYesPage.swift; sourceTree = "<group>"; };
 		3F5FA053234677CA00C2E14F /* homePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageController.swift; sourceTree = "<group>"; };
 		3F5FA055234677D800C2E14F /* homePageFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageFields.swift; sourceTree = "<group>"; };
@@ -132,6 +156,18 @@
 				3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */,
 				3F8B6E4A234D8CC600071C40 /* thirdNoPage.swift */,
 				3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */,
+				3F5EBEA5234E19BC001A1FEF /* fourthBasePage.swift */,
+				3F5EBEA7234E1C64001A1FEF /* fourthYesPage.swift */,
+				3F5EBEA9234E1EBB001A1FEF /* fourthNoPage.swift */,
+				3F5EBEAB234E20D8001A1FEF /* fourthNAPage.swift */,
+				3F5EBEAD234E2374001A1FEF /* fifthBasePage.swift */,
+				3F5EBEAF234E25C3001A1FEF /* fifthYesPage.swift */,
+				3F5EBEB1234E2949001A1FEF /* fifthNoPage.swift */,
+				3F5EBEB3234E2B7F001A1FEF /* fifthNAPage.swift */,
+				3F5EBEB5234E3AE7001A1FEF /* sixthBasePage.swift */,
+				3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */,
+				3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */,
+				3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -272,11 +308,23 @@
 				3FF88753234D6530007646FE /* secondNoPage.swift in Sources */,
 				3FF88755234D659F007646FE /* secondNAPage.swift in Sources */,
 				3F64629C234A6FC8005C8C57 /* firstNoPage.swift in Sources */,
+				3F5EBEAA234E1EBB001A1FEF /* fourthNoPage.swift in Sources */,
+				3F5EBEB0234E25C3001A1FEF /* fifthYesPage.swift in Sources */,
+				3F5EBEB8234E3B27001A1FEF /* sixthYesPage.swift in Sources */,
+				3F5EBEB2234E2949001A1FEF /* fifthNoPage.swift in Sources */,
 				3F8B6E4D234D8D0C00071C40 /* thirdNAPage.swift in Sources */,
+				3F5EBEA8234E1C64001A1FEF /* fourthYesPage.swift in Sources */,
 				3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */,
+				3F5EBEB4234E2B7F001A1FEF /* fifthNAPage.swift in Sources */,
 				3F3C2A342343A5D70043CE67 /* AppDelegate.swift in Sources */,
+				3F5EBEBC234E3B91001A1FEF /* sixthNAPage.swift in Sources */,
+				3F5EBEBA234E3B55001A1FEF /* sixthNoPage.swift in Sources */,
+				3F5EBEB6234E3AE7001A1FEF /* sixthBasePage.swift in Sources */,
+				3F5EBEA6234E19BC001A1FEF /* fourthBasePage.swift in Sources */,
+				3F5EBEAC234E20D8001A1FEF /* fourthNAPage.swift in Sources */,
 				3F3C2A362343A5D70043CE67 /* SceneDelegate.swift in Sources */,
 				3F8B6E49234D8C5A00071C40 /* thirdYesPage.swift in Sources */,
+				3F5EBEAE234E2374001A1FEF /* fifthBasePage.swift in Sources */,
 				3F8B6E47234D8AC300071C40 /* thirdBasePage.swift in Sources */,
 				3F7C513D234D61AC00EF2055 /* secondYesPage.swift in Sources */,
 				3F8B6E4B234D8CC600071C40 /* thirdNoPage.swift in Sources */,

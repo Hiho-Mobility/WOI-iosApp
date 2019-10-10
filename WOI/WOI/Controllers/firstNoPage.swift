@@ -8,6 +8,8 @@
 
 import UIKit
 import iOSDropDown
+import FirebaseDatabase
+import FirebaseStorage
 
 
 class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
@@ -19,7 +21,9 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
     @IBOutlet var thirdImage: UIImageView!
-
+    
+    var ref: DatabaseReference?
+    var inputVals = [String: Any]()
     
     @IBOutlet var firstPara: UILabel!
     @IBOutlet var secondPara: UILabel!
@@ -45,7 +49,10 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
 
         
-    
+        ref = Database.database().reference()
+        
+        
+        
         additionalCommentsBox.delegate = self
         additionalCommentsBox.text = "Additional Comments"
         additionalCommentsBox.textColor = UIColor.lightGray
@@ -55,8 +62,6 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         noBorderBox.layer.cornerRadius = 5
         
       
-        
-        
         
         
         
@@ -107,10 +112,131 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
              self.nextButton.isEnabled = true
         }else{
-               self.nextButton.isEnabled = false
+             self.nextButton.isEnabled = false
         }
         
     }
+    
+    @IBAction func nextButtonClick(_ sender: Any) {
+        
+        
+        
+        self.inputVals["Technician had professional presentation?"] = "NO"
+        self.inputVals["Additional Comments"] = additionalCommentsBox.text
+        
+        if additionalCommentsBox.text == "Additional Comments"{
+            self.inputVals["Additional Comments"] = ""
+        }
+
+        if firstButtonClick{
+            self.inputVals["Reason1"] = firstPara.text
+        }
+        if secondButtonClick {
+            self.inputVals["Reason2"] = secondPara.text
+
+        }
+        if thirdButtonClick{
+            self.inputVals["Reason3"] = thirdPara.text
+        }
+        
+        ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(self.inputVals)
+        
+        if imageSelected[0] {
+            
+            guard let imageData = firstImage.image?.jpegData(compressionQuality: 0.8) else{
+                return
+            }
+            
+            let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+            let imageName = UUID().uuidString
+            print(imageName)
+            let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+            
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpg"
+            
+            
+            storageIosPicRef.putData(imageData, metadata: metadata) {
+                (storageMetaData, err) in
+        
+                if err != nil{
+                    print(err?.localizedDescription)
+                    return
+                }
+                storageIosPicRef.downloadURL (completion: { (url, err) in
+                    if let metaImageUrl = url?.absoluteString {
+                        self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic1").setValue(metaImageUrl)
+                    }
+      
+                })
+            }
+            
+            
+            
+            
+        }
+
+        if imageSelected[1] {
+          guard let imageData = secondImage.image?.jpegData(compressionQuality: 0.8) else{
+              return
+          }
+          
+            let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+            let imageName = UUID().uuidString
+            print(imageName)
+            let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+          
+            let metadata = StorageMetadata()
+            metadata.contentType = "image/jpg"
+            storageIosPicRef.putData(imageData, metadata: metadata) {
+              (storageMetaData, err) in
+      
+              if err != nil{
+                  print(err?.localizedDescription)
+                  return
+              }
+              storageIosPicRef.downloadURL (completion: { (url, err) in
+                  if let metaImageUrl = url?.absoluteString {
+                      self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic2").setValue(metaImageUrl)
+                  }
+    
+              })
+          }
+        }
+
+        if imageSelected[2] {
+          guard let imageData = thirdImage.image?.jpegData(compressionQuality: 0.8) else{
+              return
+          }
+          
+          let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+          let imageName = UUID().uuidString
+          print(imageName)
+          let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+          
+          let metadata = StorageMetadata()
+          metadata.contentType = "image/jpg"
+         
+          storageIosPicRef.putData(imageData, metadata: metadata) {
+              (storageMetaData, err) in
+      
+              if err != nil{
+                  print(err?.localizedDescription)
+                  return
+              }
+              storageIosPicRef.downloadURL (completion: { (url, err) in
+                  if let metaImageUrl = url?.absoluteString {
+                      self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic3").setValue(metaImageUrl)
+                  }
+    
+              })
+          }
+        }
+        
+        
+        print("")
+    }
+    
     @IBAction func firstButtonPressed(_ sender: Any) {
         
            if firstButtonClick == true{

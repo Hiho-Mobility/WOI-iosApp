@@ -8,11 +8,16 @@
 
 import UIKit
 import iOSDropDown
-import Firebase
+import FirebaseDatabase
+
+
+
+
 
 class firstYesPage: UIViewController {
     
-    
+    var ref: DatabaseReference?
+    var workNum = ""
     
     @IBOutlet var firstParagraph: UILabel!
     @IBOutlet var secondParagraph: UILabel!
@@ -22,7 +27,6 @@ class firstYesPage: UIViewController {
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
     
-
     
     var firstButtonClick = false
     var paragraphStrings = [String]()
@@ -33,6 +37,8 @@ class firstYesPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = Database.database().reference()
+        
         
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
@@ -42,7 +48,6 @@ class firstYesPage: UIViewController {
         yesBorderBox.layer.cornerRadius = 5
        
         self.nextButton.isEnabled = true
-        
         
         
         
@@ -84,6 +89,13 @@ class firstYesPage: UIViewController {
           self.navigationController?.popToRootViewController(animated: true)
           
       }
+    
+    @IBAction func nextButtonClick(_ sender: Any) {
+        
+        ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(["Technician had professional presentation?":"YES"])
+        print("")
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         let fontSize1 = self.firstParagraph.getFontSizeForLabel()

@@ -8,6 +8,8 @@
 
 import UIKit
 import iOSDropDown
+import FirebaseDatabase
+import FirebaseStorage
 
 class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
@@ -21,6 +23,9 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet var firstImage: UIImageView!
     @IBOutlet var secondImage: UIImageView!
     @IBOutlet var thirdImage: UIImageView!
+    
+    var ref: DatabaseReference?
+    var inputVals = [String: Any]()
 
     var imageSelected = [false, false, false]
     
@@ -31,7 +36,7 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
 
         
-        
+        ref = Database.database().reference()
              
         additionalCommentsBox.delegate = self
         additionalCommentsBox.text = "Additional Comments"
@@ -170,6 +175,115 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         picker.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+           
+           
+          
+              self.inputVals["Technician had professional presentation?"] = "N/A"
+              self.inputVals["Additional Comments"] = additionalCommentsBox.text
+              
+              if additionalCommentsBox.text == "Additional Comments"{
+                  self.inputVals["Additional Comments"] = ""
+              }
+              
+              ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(self.inputVals)
+              
+              if imageSelected[0] {
+                  
+                  guard let imageData = firstImage.image?.jpegData(compressionQuality: 0.8) else{
+                      return
+                  }
+                  
+                  let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+                  let imageName = UUID().uuidString
+                  print(imageName)
+                  let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+                  
+                  let metadata = StorageMetadata()
+                  metadata.contentType = "image/jpg"
+               
+                  storageIosPicRef.putData(imageData, metadata: metadata) {
+                      (storageMetaData, err) in
+              
+                      if err != nil{
+                          print(err?.localizedDescription)
+                          return
+                      }
+                      storageIosPicRef.downloadURL (completion: { (url, err) in
+                          if let metaImageUrl = url?.absoluteString {
+                              self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic1").setValue(metaImageUrl)
+                          }
+            
+                      })
+                  }
+                  
+                  
+                  
+                  
+              }
+
+              if imageSelected[1] {
+                guard let imageData = secondImage.image?.jpegData(compressionQuality: 0.8) else{
+                    return
+                }
+                
+                let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+                let imageName = UUID().uuidString
+                print(imageName)
+                let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+                
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpg"
+                storageIosPicRef.putData(imageData, metadata: metadata) {
+                    (storageMetaData, err) in
+            
+                    if err != nil{
+                        print(err?.localizedDescription)
+                        return
+                    }
+                    storageIosPicRef.downloadURL (completion: { (url, err) in
+                        if let metaImageUrl = url?.absoluteString {
+                            self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic2").setValue(metaImageUrl)
+                        }
+          
+                    })
+                }
+              }
+
+              if imageSelected[2] {
+                guard let imageData = thirdImage.image?.jpegData(compressionQuality: 0.8) else{
+                    return
+                }
+                
+                let storageRef = Storage.storage().reference(forURL: "gs://woi-254713.appspot.com")
+                let imageName = UUID().uuidString
+                print(imageName)
+                let storageIosPicRef = storageRef.child("iosAppPics").child(imageName)
+                
+                let metadata = StorageMetadata()
+                metadata.contentType = "image/jpg"
+               
+                storageIosPicRef.putData(imageData, metadata: metadata) {
+                    (storageMetaData, err) in
+            
+                    if err != nil{
+                        print(err?.localizedDescription)
+                        return
+                    }
+                    storageIosPicRef.downloadURL (completion: { (url, err) in
+                        if let metaImageUrl = url?.absoluteString {
+                            self.ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").child("pic3").setValue(metaImageUrl)
+                        }
+          
+                    })
+                }
+              }
+              
+              
+              print("")
+          }
+    
+
 
 }
 

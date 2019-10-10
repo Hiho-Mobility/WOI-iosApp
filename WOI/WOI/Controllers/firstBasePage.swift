@@ -20,7 +20,6 @@ class firstBasePage: UIViewController {
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
     
-
     
     var firstButtonClick = false
     var paragraphStrings = [String]()
@@ -56,7 +55,6 @@ class firstBasePage: UIViewController {
         if selectedText == "YES"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstYesPageController = storyBoard.instantiateViewController(withIdentifier: "firstYesPage")
-            
             self.navigationController?.pushViewController(firstYesPageController, animated: false)
             
             

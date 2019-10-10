@@ -11,4 +11,5 @@ target 'WOI' do
   pod 'Firebase/Database'
   pod 'Firebase/Firestore'
   pod 'iOSDropDown'
+  pod 'Firebase/Storage'
 end

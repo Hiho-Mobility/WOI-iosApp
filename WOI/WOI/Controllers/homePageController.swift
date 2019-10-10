@@ -9,6 +9,9 @@
 import UIKit
 import FirebaseDatabase
 
+
+public var futureReference : String?
+
 class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
     
@@ -18,9 +21,9 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     @IBOutlet var managerNameDropdown: UITextField!
     @IBOutlet var whenDropdown: UITextField!
     
+    
+    
     var ref: DatabaseReference?
-
-    var homePage : homePageFields?
     
     var currentTextField = UITextField()
     var pickerView = UIPickerView()
@@ -34,7 +37,8 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.homePage = homePageFields()
+        
+        
         
         ref = Database.database().reference()
         navigationItem.title = "Work Order Inspections"
@@ -125,8 +129,9 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     @IBAction func addCaseInfo(_ sender: Any) {
         
         guard let name = workOrderNumber.text else { return }
-      
         
+        
+        futureReference = workOrderNumber.text
         ref?.child("Work Order: \(name)")
         
        
@@ -134,7 +139,10 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         
         presentingViewController?.dismiss(animated: true)
         
+       // self.performSegue(withIdentifier: "homePageController", sender: self)
+        
     }
+        
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
@@ -165,7 +173,6 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
             self.present(ac, animated: true)
         }
         
-
         
         return pass
     }
@@ -184,7 +191,7 @@ extension UIViewController {
         view.addGestureRecognizer(tap)
     }
 
-    @objc  func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
 }
