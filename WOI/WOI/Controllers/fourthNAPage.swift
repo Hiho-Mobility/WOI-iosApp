@@ -51,7 +51,7 @@ class fourthNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
       
         self.nextButton.isEnabled = true
          
-        
+        self.hideKeyboardWhenTappedAround()
         
         
         

@@ -429,27 +429,27 @@ shoes worn</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="30y-yU-llU">
-                                                <rect key="frame" x="8" y="90.5" width="382" height="500"/>
+                                                <rect key="frame" x="8" y="92" width="382" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="R0L-Ol-gk4">
-                                                        <rect key="frame" x="0.0" y="112.5" width="22" height="274.5"/>
+                                                        <rect key="frame" x="0.0" y="111" width="35" height="277.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTb-6N-TXN">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="pvx-n0-izw" eventType="touchUpInside" id="vk1-PF-sx1"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awt-HR-SO2">
-                                                                <rect key="frame" x="0.0" y="167.5" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="167.5" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="pvx-n0-izw" eventType="touchUpInside" id="bja-xG-r7t"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO9-7g-tgU">
-                                                                <rect key="frame" x="0.0" y="233.5" width="22" height="41"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="pvx-n0-izw" eventType="touchUpInside" id="TIF-Uv-STn"/>
@@ -458,7 +458,7 @@ shoes worn</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-We-DVE">
-                                                        <rect key="frame" x="35" y="112.5" width="347" height="274.5"/>
+                                                        <rect key="frame" x="35" y="111" width="347" height="277.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fqy-7B-gwR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="322.5" height="142.5"/>
@@ -489,7 +489,7 @@ shoes worn</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="UYE-Nb-FpG">
-                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="nKF-2K-6UK"/>
                                                                 </constraints>
@@ -523,7 +523,7 @@ shoes worn</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="a5I-pV-gXf">
-                                                <rect key="frame" x="8" y="507.5" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="510.5" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="iUp-fm-XHH"/>
                                                 </constraints>
@@ -541,7 +541,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OLQ-OM-Eh2">
-                                                <rect key="frame" x="8" y="545.5" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="548.5" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dI1-CM-tLG">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -580,7 +580,7 @@ shoes worn</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="45U-6e-YJP">
-                                                <rect key="frame" x="8" y="615.5" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="618.5" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="VoL-NU-6Nx"/>
                                                 </constraints>
@@ -589,7 +589,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-Fc-iz7">
-                                                <rect key="frame" x="8" y="660.5" width="382" height="168.5"/>
+                                                <rect key="frame" x="8" y="663.5" width="382" height="165.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="HhB-P5-xEG"/>
@@ -2151,27 +2151,27 @@ material/service provider)</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="517-Lu-tIQ">
-                                                <rect key="frame" x="8" y="90.5" width="382" height="500"/>
+                                                <rect key="frame" x="8" y="92" width="382" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-Vk-nat">
-                                                        <rect key="frame" x="0.0" y="112.5" width="22" height="274.5"/>
+                                                        <rect key="frame" x="0.0" y="111" width="35" height="277.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-Z0-ut2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="5k9-iT-gqu"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-Q3-f7g">
-                                                                <rect key="frame" x="0.0" y="167.5" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="167.5" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="kDE-NX-0Cj"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-wr-viJ">
-                                                                <rect key="frame" x="0.0" y="233.5" width="22" height="41"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="Khw-AZ-lJm"/>
@@ -2180,7 +2180,7 @@ material/service provider)</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TvL-0d-3bj">
-                                                        <rect key="frame" x="35" y="112.5" width="347" height="274.5"/>
+                                                        <rect key="frame" x="35" y="111" width="347" height="277.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGR-Pu-qFk">
                                                                 <rect key="frame" x="0.0" y="0.0" width="322.5" height="142.5"/>
@@ -2211,7 +2211,7 @@ shoes worn</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="zan-iV-BRv">
-                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="VOW-du-b9V"/>
                                                                 </constraints>
@@ -2241,7 +2241,7 @@ shoes worn</string>
                                                 <state key="normal" title="Next"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-5L-npu">
-                                                <rect key="frame" x="8" y="507.5" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="510.5" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="fg0-Id-81W"/>
                                                 </constraints>
@@ -2259,7 +2259,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-ZE-nfe">
-                                                <rect key="frame" x="8" y="545.5" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="548.5" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-6E-lzJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -2298,7 +2298,7 @@ shoes worn</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-vu-Be9">
-                                                <rect key="frame" x="8" y="615.5" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="618.5" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="hSl-Yx-ENa"/>
                                                 </constraints>
@@ -2307,7 +2307,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yJP-kh-juo">
-                                                <rect key="frame" x="8" y="660.5" width="382" height="168.5"/>
+                                                <rect key="frame" x="8" y="663.5" width="382" height="165.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="4TD-1h-T5m"/>
@@ -2409,7 +2409,7 @@ shoes worn</string>
                                 <rect key="frame" x="8" y="34" width="398" height="877"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaE-21-d5j">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="702"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="705"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Rp-zr-hdL">
                                                 <rect key="frame" x="8" y="23" width="382" height="50"/>
@@ -2446,20 +2446,20 @@ work order?</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dx7-St-WN5">
-                                                <rect key="frame" x="8" y="124.5" width="382" height="350"/>
+                                                <rect key="frame" x="8" y="126" width="382" height="350"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="peK-jB-5Ch">
-                                                        <rect key="frame" x="0.0" y="103.5" width="22" height="143"/>
+                                                        <rect key="frame" x="0.0" y="102" width="35" height="146"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koh-Kh-woK">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="77"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="77"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="rD5-b7-Z37" eventType="touchUpInside" id="48O-cu-jHN"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-5M-f2R">
-                                                                <rect key="frame" x="0.0" y="102" width="22" height="41"/>
+                                                                <rect key="frame" x="0.0" y="102" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="rD5-b7-Z37" eventType="touchUpInside" id="zQC-Na-igq"/>
@@ -2468,7 +2468,7 @@ work order?</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="8ih-B5-k8W">
-                                                        <rect key="frame" x="35" y="103.5" width="347" height="143"/>
+                                                        <rect key="frame" x="35" y="102" width="347" height="146"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKG-9U-SUi">
                                                                 <rect key="frame" x="0.0" y="0.0" width="305" height="77"/>
@@ -2483,7 +2483,7 @@ performed/completed</string>
                                                                 <string key="userLabel">Facilities Operations issued uniform worn to department standards, trade specific dress code. (i.e. shirt tucked-in, belt worn, only Facilities hats or beanies are acceptable, hats must be worn forward facing, collar tabs buttoned (if applicable), long sleeves buttoned down)</string>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="hfz-mr-9Qz">
-                                                                <rect key="frame" x="0.0" y="102" width="301" height="41"/>
+                                                                <rect key="frame" x="0.0" y="102" width="301" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="ZdL-hm-fee"/>
                                                                 </constraints>
@@ -2505,7 +2505,7 @@ performed/completed</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mt-Xr-87p">
-                                                <rect key="frame" x="337" y="662" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="665" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="6DE-DZ-5e3"/>
                                                 </constraints>
@@ -2517,7 +2517,7 @@ performed/completed</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dPM-DE-VTo">
-                                                <rect key="frame" x="8" y="401" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="404" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="vkU-xo-ynE"/>
                                                 </constraints>
@@ -2535,7 +2535,7 @@ performed/completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uEF-7O-Pdo">
-                                                <rect key="frame" x="8" y="439" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="442" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SrB-GX-QnN">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -2574,7 +2574,7 @@ performed/completed</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PBg-AL-hqV">
-                                                <rect key="frame" x="8" y="509" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="512" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="uO3-L1-ZsU"/>
                                                 </constraints>
@@ -2583,7 +2583,7 @@ performed/completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-GB-zvD">
-                                                <rect key="frame" x="8" y="554" width="382" height="100"/>
+                                                <rect key="frame" x="8" y="557" width="382" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="hzH-vB-2pq"/>
@@ -3119,27 +3119,27 @@ accurately achieved?</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-lT-YQl">
-                                                <rect key="frame" x="8" y="114.5" width="382" height="400"/>
+                                                <rect key="frame" x="8" y="124" width="382" height="400"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HZv-90-Oca">
-                                                        <rect key="frame" x="0.0" y="103.5" width="22" height="193"/>
+                                                        <rect key="frame" x="0.0" y="94" width="35" height="212"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coU-h5-oGg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="hVH-5D-lAH" eventType="touchUpInside" id="oKT-3r-U5f"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKq-q5-hC8">
-                                                                <rect key="frame" x="0.0" y="102" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="102" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="hVH-5D-lAH" eventType="touchUpInside" id="J0x-aB-T0s"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2Y-j9-FCa">
-                                                                <rect key="frame" x="0.0" y="168" width="22" height="25"/>
+                                                                <rect key="frame" x="0.0" y="168" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="hVH-5D-lAH" eventType="touchUpInside" id="lpA-sn-DGv"/>
@@ -3148,7 +3148,7 @@ accurately achieved?</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="jtZ-9L-BKU">
-                                                        <rect key="frame" x="35" y="103.5" width="347" height="193"/>
+                                                        <rect key="frame" x="35" y="94" width="347" height="212"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUi-9N-udn">
                                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="77"/>
@@ -3175,7 +3175,7 @@ unachievable by technician</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOW resolved" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="kCB-ZN-g5u">
-                                                                <rect key="frame" x="0.0" y="168" width="111" height="25"/>
+                                                                <rect key="frame" x="0.0" y="168" width="111" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="Krs-mF-G7E"/>
                                                                 </constraints>
@@ -3207,7 +3207,7 @@ unachievable by technician</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qLX-B1-Fg1">
-                                                <rect key="frame" x="8" y="441" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="460" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="ufE-l2-nb5"/>
                                                 </constraints>
@@ -3225,7 +3225,7 @@ unachievable by technician</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0oK-ag-oFz">
-                                                <rect key="frame" x="8" y="479" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="498" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhw-rW-aiv">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -3264,7 +3264,7 @@ unachievable by technician</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Explain why the scope of work was not performed accurately?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yeu-we-9MU">
-                                                <rect key="frame" x="8" y="549" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="568" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="NRl-Uq-z2h"/>
                                                 </constraints>
@@ -3273,7 +3273,7 @@ unachievable by technician</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AEz-8p-Fd8">
-                                                <rect key="frame" x="8" y="594" width="382" height="235"/>
+                                                <rect key="frame" x="8" y="613" width="382" height="216"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="tHb-hw-7F1"/>
@@ -3849,38 +3849,38 @@ quality?</string>
                                                 <rect key="frame" x="8" y="176.5" width="382" height="650"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="a7m-wk-f3k">
-                                                        <rect key="frame" x="0.0" y="91.5" width="22" height="467"/>
+                                                        <rect key="frame" x="0.0" y="91.5" width="35" height="467"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-vK-udD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="77"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="77"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="NoR-Is-mLl"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0q-7D-yey">
-                                                                <rect key="frame" x="0.0" y="102" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="102" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="WeX-LV-bOn"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mO-fz-Y7T">
-                                                                <rect key="frame" x="0.0" y="168" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="168" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="e7A-6k-9Qs"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjs-UX-ehm">
-                                                                <rect key="frame" x="0.0" y="234" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="234" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="fourtButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="kpu-Fh-m92"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hT-F4-Y1F">
-                                                                <rect key="frame" x="0.0" y="406" width="22" height="61"/>
+                                                                <rect key="frame" x="0.0" y="406" width="35" height="61"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="fifthButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="JTX-tP-VFz"/>
@@ -4785,7 +4785,7 @@ was completed</string>
                                 <rect key="frame" x="8" y="34" width="398" height="877"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVb-Qb-f4T">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="798"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="801"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work order process was followed?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="P8N-WD-mof">
                                                 <rect key="frame" x="8" y="23" width="382" height="30"/>
@@ -4820,34 +4820,34 @@ was completed</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-Nd-ecm">
-                                                <rect key="frame" x="8" y="112.5" width="382" height="450"/>
+                                                <rect key="frame" x="8" y="114" width="382" height="450"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="HaL-Ex-f8N">
-                                                        <rect key="frame" x="0.0" y="95.5" width="22" height="259"/>
+                                                        <rect key="frame" x="0.0" y="94" width="35" height="262"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrz-YR-gub">
-                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="77"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="77"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="d9A-ML-Bec" eventType="touchUpInside" id="syW-Ap-zjz"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhh-Ir-7wr">
-                                                                <rect key="frame" x="0.0" y="102" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="102" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="d9A-ML-Bec" eventType="touchUpInside" id="etG-er-E6t"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAm-Im-JJm">
-                                                                <rect key="frame" x="0.0" y="152" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="152" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="d9A-ML-Bec" eventType="touchUpInside" id="5rW-sW-rdb"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZH-DX-0lP">
-                                                                <rect key="frame" x="0.0" y="218" width="22" height="41"/>
+                                                                <rect key="frame" x="0.0" y="218" width="35" height="44"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="fourtButtonPressed:" destination="d9A-ML-Bec" eventType="touchUpInside" id="cld-Ag-MS8"/>
@@ -4856,7 +4856,7 @@ was completed</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-dV-6cu">
-                                                        <rect key="frame" x="35" y="95.5" width="347" height="259"/>
+                                                        <rect key="frame" x="35" y="94" width="347" height="262"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes/images added to the work order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hWJ-Xw-vgI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="301.5" height="77"/>
@@ -4889,7 +4889,7 @@ notified about work order status</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="a8w-aL-HlS">
-                                                                <rect key="frame" x="0.0" y="218" width="318.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="218" width="318.5" height="44"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="GNc-Ze-AQO"/>
                                                                 </constraints>
@@ -4913,7 +4913,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aU-IZ-O2n">
-                                                <rect key="frame" x="337" y="758" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="761" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="LOg-PT-iEI"/>
                                                 </constraints>
@@ -4925,7 +4925,7 @@ was completed</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BtI-fV-cPU">
-                                                <rect key="frame" x="8" y="497" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="500" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="hNH-vE-NQj"/>
                                                 </constraints>
@@ -4943,7 +4943,7 @@ was completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LBR-ST-OgX">
-                                                <rect key="frame" x="8" y="535" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="538" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNJ-LA-Sw8">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -4982,7 +4982,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XyX-ym-KMX">
-                                                <rect key="frame" x="8" y="605" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="608" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="6gv-dD-gDc"/>
                                                 </constraints>
@@ -4991,7 +4991,7 @@ was completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-Pc-SEj">
-                                                <rect key="frame" x="8" y="650" width="382" height="100"/>
+                                                <rect key="frame" x="8" y="653" width="382" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="Wkt-Be-RzQ"/>
@@ -5478,7 +5478,7 @@ work zone?</string>
                                 <rect key="frame" x="8" y="34" width="398" height="877"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00q-j3-KDm">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="702.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="741"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zi2-AT-Xmx">
                                                 <rect key="frame" x="8" y="23" width="382" height="50"/>
@@ -5515,10 +5515,10 @@ work zone?</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AE9-XS-IvH">
-                                                <rect key="frame" x="8" y="137.5" width="382" height="450"/>
+                                                <rect key="frame" x="8" y="176" width="382" height="450"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="p9q-bV-KsF">
-                                                        <rect key="frame" x="0.0" y="95.5" width="13.5" height="259"/>
+                                                        <rect key="frame" x="0.0" y="57" width="13.5" height="335.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2v-hf-3S5">
                                                                 <rect key="frame" x="0.0" y="0.0" width="13.5" height="77"/>
@@ -5533,13 +5533,13 @@ work zone?</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKL-4F-yr8">
-                                                                <rect key="frame" x="0.0" y="152" width="13.5" height="38.5"/>
+                                                                <rect key="frame" x="0.0" y="168" width="13.5" height="38.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WI-Qd-a9L">
-                                                                <rect key="frame" x="0.0" y="218" width="13.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="294.5" width="13.5" height="41"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -5547,20 +5547,22 @@ work zone?</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="gUx-e9-hLG">
-                                                        <rect key="frame" x="25" y="95.5" width="357" height="259"/>
+                                                        <rect key="frame" x="25" y="57" width="357" height="335.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes/images added to the work order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-RW-KKZ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="77"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-RW-KKZ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="77"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="L3H-jD-eUM"/>
                                                                 </constraints>
+                                                                <string key="text">Pre-job hazard analysis conducted and
+proper safety measures implemented according to the job and the job site</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <string key="userLabel">Facilities Operations issued uniform worn to department standards, trade specific dress code. (i.e. shirt tucked-in, belt worn, only Facilities hats or beanies are acceptable, hats must be worn forward facing, collar tabs buttoned (if applicable), long sleeves buttoned down)</string>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labor time entries made appropriately" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="shI-Iv-ck7">
-                                                                <rect key="frame" x="0.0" y="102" width="299" height="25"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safe work zone created using signage, cones, safety tape" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="shI-Iv-ck7">
+                                                                <rect key="frame" x="0.0" y="102" width="306.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="lBt-Mg-1hJ"/>
                                                                 </constraints>
@@ -5569,23 +5571,21 @@ work zone?</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="0Pt-Xn-215">
-                                                                <rect key="frame" x="0.0" y="152" width="288" height="41"/>
+                                                                <rect key="frame" x="0.0" y="168" width="355" height="101.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="7sr-mS-sU9"/>
                                                                 </constraints>
-                                                                <string key="text">Planner Scheduler and/or Supervisor
-notified about work order status</string>
+                                                                <string key="text">A laydown area set in an orderly manner preventing debris, trash, tools, material
+and or equipment from creating trip hazards, blocking emergency egress or creating a housekeeping issue</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="75U-bV-2nP">
-                                                                <rect key="frame" x="0.0" y="218" width="318.5" height="41"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egress to and from work site kept clean and clear" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="75U-bV-2nP">
+                                                                <rect key="frame" x="0.0" y="294.5" width="312.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="hRi-xd-aGW"/>
                                                                 </constraints>
-                                                                <string key="text">Operation/task completed after the work
-was completed</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -5604,7 +5604,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8x6-Vd-W6U">
-                                                <rect key="frame" x="337" y="662.5" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="701" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="2kb-gU-zXc"/>
                                                 </constraints>
@@ -5697,7 +5697,7 @@ was completed</string>
                                 <rect key="frame" x="8" y="34" width="398" height="877"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUk-QU-JdE">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="818"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="894.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-Rd-1rm">
                                                 <rect key="frame" x="8" y="23" width="382" height="50"/>
@@ -5734,10 +5734,10 @@ work zone?</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-jk-l8H">
-                                                <rect key="frame" x="8" y="132.5" width="382" height="450"/>
+                                                <rect key="frame" x="8" y="171" width="382" height="450"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-Fj-sEQ">
-                                                        <rect key="frame" x="0.0" y="95.5" width="22" height="259"/>
+                                                        <rect key="frame" x="0.0" y="57" width="22" height="335.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JU-9j-Uur">
                                                                 <rect key="frame" x="0.0" y="0.0" width="22" height="77"/>
@@ -5754,14 +5754,14 @@ work zone?</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GJ2-UJ-qNs">
-                                                                <rect key="frame" x="0.0" y="152" width="22" height="22"/>
+                                                                <rect key="frame" x="0.0" y="168" width="22" height="22"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="09k-PP-Iml" eventType="touchUpInside" id="bE3-Zr-v4l"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCY-V3-kyD">
-                                                                <rect key="frame" x="0.0" y="218" width="22" height="41"/>
+                                                                <rect key="frame" x="0.0" y="294.5" width="22" height="41"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="fourtButtonPressed:" destination="09k-PP-Iml" eventType="touchUpInside" id="yrX-7L-3T0"/>
@@ -5770,20 +5770,22 @@ work zone?</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ney-r7-Uvt">
-                                                        <rect key="frame" x="35" y="95.5" width="347" height="259"/>
+                                                        <rect key="frame" x="35" y="57" width="347" height="335.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes/images added to the work order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-Pj-GD7">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="77"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f9T-Pj-GD7">
+                                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="77"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="5xl-gK-Kj4"/>
                                                                 </constraints>
+                                                                <string key="text">Pre-job hazard analysis conducted and
+proper safety measures implemented according to the job and the job site</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <string key="userLabel">Facilities Operations issued uniform worn to department standards, trade specific dress code. (i.e. shirt tucked-in, belt worn, only Facilities hats or beanies are acceptable, hats must be worn forward facing, collar tabs buttoned (if applicable), long sleeves buttoned down)</string>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labor time entries made appropriately" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="KzR-dz-356">
-                                                                <rect key="frame" x="0.0" y="102" width="299" height="25"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safe work zone created using signage, cones, safety tape" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="KzR-dz-356">
+                                                                <rect key="frame" x="0.0" y="102" width="306.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="yhG-ep-ex2"/>
                                                                 </constraints>
@@ -5792,23 +5794,21 @@ work zone?</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="EOU-GQ-MAb">
-                                                                <rect key="frame" x="0.0" y="152" width="288" height="41"/>
+                                                                <rect key="frame" x="0.0" y="168" width="317" height="101.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="vHz-R1-a8B"/>
                                                                 </constraints>
-                                                                <string key="text">Planner Scheduler and/or Supervisor
-notified about work order status</string>
+                                                                <string key="text">A laydown area set in an orderly manner preventing debris, trash, tools, material
+and or equipment from creating trip hazards, blocking emergency egress or creating a housekeeping issue</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="2yU-PQ-lVU">
-                                                                <rect key="frame" x="0.0" y="218" width="318.5" height="41"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egress to and from work site kept clean and clear" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="2yU-PQ-lVU">
+                                                                <rect key="frame" x="0.0" y="294.5" width="312.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="38f-1R-tam"/>
                                                                 </constraints>
-                                                                <string key="text">Operation/task completed after the work
-was completed</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -5827,7 +5827,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iI-zJ-KNX">
-                                                <rect key="frame" x="337" y="778" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="854.5" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="Sbx-R2-wSv"/>
                                                 </constraints>
@@ -5839,7 +5839,7 @@ was completed</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PIj-z4-nlf">
-                                                <rect key="frame" x="8" y="517" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="593.5" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="D03-FH-DGh"/>
                                                 </constraints>
@@ -5857,7 +5857,7 @@ was completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7Kn-9N-Sjn">
-                                                <rect key="frame" x="8" y="555" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="631.5" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oo1-7L-d3x">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -5896,7 +5896,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ich-04-Rlz">
-                                                <rect key="frame" x="8" y="625" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="701.5" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="x9A-4C-hdP"/>
                                                 </constraints>
@@ -5905,7 +5905,7 @@ was completed</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TIt-Cn-uOE">
-                                                <rect key="frame" x="8" y="670" width="382" height="100"/>
+                                                <rect key="frame" x="8" y="746.5" width="382" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="aD1-8y-2fx"/>
@@ -6008,7 +6008,7 @@ was completed</string>
                                 <rect key="frame" x="8" y="-10" width="398" height="867"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6j-Nx-7t9">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="735.5"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="766"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEG-Td-lmZ">
                                                 <rect key="frame" x="8" y="23" width="382" height="50"/>
@@ -6045,10 +6045,10 @@ work zone?</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KKO-VZ-UDy">
-                                                <rect key="frame" x="8" y="120.5" width="382" height="500"/>
+                                                <rect key="frame" x="8" y="151" width="382" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0r3-YW-QKk">
-                                                        <rect key="frame" x="0.0" y="112.5" width="13.5" height="275"/>
+                                                        <rect key="frame" x="0.0" y="82" width="13.5" height="335.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEF-72-C59">
                                                                 <rect key="frame" x="0.0" y="0.0" width="13.5" height="77"/>
@@ -6069,7 +6069,7 @@ work zone?</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQV-GH-rld">
-                                                                <rect key="frame" x="0.0" y="234" width="13.5" height="41"/>
+                                                                <rect key="frame" x="0.0" y="294.5" width="13.5" height="41"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -6077,47 +6077,45 @@ work zone?</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="UQ2-bB-Wxb">
-                                                        <rect key="frame" x="25" y="112.5" width="357" height="275"/>
+                                                        <rect key="frame" x="25" y="82" width="357" height="335.5"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes/images added to the work order" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aU4-iC-R2h">
-                                                                <rect key="frame" x="0.0" y="0.0" width="301.5" height="77"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aU4-iC-R2h">
+                                                                <rect key="frame" x="0.0" y="0.0" width="305.5" height="77"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="77" id="ht5-IG-yA6"/>
                                                                 </constraints>
+                                                                <string key="text">Pre-job hazard analysis conducted and
+proper safety measures implemented according to the job and the job site</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                                 <string key="userLabel">Facilities Operations issued uniform worn to department standards, trade specific dress code. (i.e. shirt tucked-in, belt worn, only Facilities hats or beanies are acceptable, hats must be worn forward facing, collar tabs buttoned (if applicable), long sleeves buttoned down)</string>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="dEN-jh-JOc">
-                                                                <rect key="frame" x="0.0" y="102" width="299" height="41"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safe work zone created using signage, cones, safety tape" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="dEN-jh-JOc">
+                                                                <rect key="frame" x="0.0" y="102" width="306.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="O9n-KC-CQQ"/>
                                                                 </constraints>
-                                                                <string key="text">Labor time entries made appropriately
-</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="wzI-yG-BqK">
-                                                                <rect key="frame" x="0.0" y="168" width="288" height="41"/>
+                                                                <rect key="frame" x="0.0" y="168" width="355" height="101.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="zdp-Pa-zaj"/>
                                                                 </constraints>
-                                                                <string key="text">Planner Scheduler and/or Supervisor
-notified about work order status</string>
+                                                                <string key="text">A laydown area set in an orderly manner preventing debris, trash, tools, material
+and or equipment from creating trip hazards, blocking emergency egress or creating a housekeeping issue</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="6zn-Sg-D2s">
-                                                                <rect key="frame" x="0.0" y="234" width="318.5" height="41"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Egress to and from work site kept clean and clear" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="6zn-Sg-D2s">
+                                                                <rect key="frame" x="0.0" y="294.5" width="312.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="suA-tm-Zbp"/>
                                                                 </constraints>
-                                                                <string key="text">Operation/task completed after the work
-was completed</string>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -6136,7 +6134,7 @@ was completed</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxW-Ri-u6h">
-                                                <rect key="frame" x="337" y="695.5" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="726" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="PJK-6R-wyN"/>
                                                 </constraints>
@@ -6507,7 +6505,7 @@ performed/completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
-                                                    <action selector="nextButtonClick:" destination="Gjq-vc-xMy" eventType="touchUpInside" id="zXA-K9-kYI"/>
+                                                    <action selector="nextButtonClick:" destination="Gjq-vc-xMy" eventType="touchUpInside" id="twj-i4-PMC"/>
                                                     <segue destination="ngO-c3-RRW" kind="show" id="cfP-bb-EAW"/>
                                                 </connections>
                                             </button>
@@ -6587,7 +6585,7 @@ performed/completed</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w4H-eP-5In"/>
-        <segue reference="vlw-pi-jHi"/>
+        <segue reference="cfP-bb-EAW"/>
         <segue reference="Vpo-Pv-9dJ"/>
         <segue reference="Tz5-1c-tCS"/>
         <segue reference="yml-xe-rKI"/>

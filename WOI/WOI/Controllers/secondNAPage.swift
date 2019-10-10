@@ -50,7 +50,7 @@ class secondNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
       
         self.nextButton.isEnabled = true
          
-        
+        self.hideKeyboardWhenTappedAround()
         
         
         

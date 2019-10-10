@@ -49,7 +49,7 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
       
         self.nextButton.isEnabled = true
          
-        
+        self.hideKeyboardWhenTappedAround()
         
         
         

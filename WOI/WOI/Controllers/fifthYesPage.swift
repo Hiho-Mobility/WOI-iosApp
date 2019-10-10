@@ -43,7 +43,7 @@ class fifthYesPage: UIViewController {
         
         
         
-        
+        ref = Database.database().reference()
         
         
         
@@ -83,6 +83,12 @@ class fifthYesPage: UIViewController {
           
       }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+                 
+             ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(["Appropriate PPE was used for the work order?":"YES"])
+             print("rumi was here")
+         }
+    
     override func viewWillAppear(_ animated: Bool) {
         let fontSize1 = self.firstParagraph.getFontSizeForLabel()
         let fontSize2 = self.secondParagraph.getFontSizeForLabel()
@@ -96,11 +102,7 @@ class fifthYesPage: UIViewController {
         self.secondParagraph.adjustsFontSizeToFitWidth = false
     }
     
-    @IBAction func nextButtonClick(_ sender: Any) {
-                 
-             ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(["Appropriate PPE was used for the work order?":"YES"])
-             print("")
-         }
+
         
 
 

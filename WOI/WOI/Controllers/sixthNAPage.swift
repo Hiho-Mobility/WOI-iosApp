@@ -49,7 +49,7 @@ class sixthNAPage:  UIViewController, UIImagePickerControllerDelegate, UINavigat
       
         self.nextButton.isEnabled = true
          
-        
+        self.hideKeyboardWhenTappedAround()
         
         
         
