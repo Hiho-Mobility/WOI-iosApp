@@ -8,6 +8,7 @@
 
 import UIKit
 import iOSDropDown
+import FirebaseDatabase
 
 class fifthYesPage: UIViewController {
 
@@ -19,7 +20,7 @@ class fifthYesPage: UIViewController {
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
     
-
+    var ref: DatabaseReference?
     
     var firstButtonClick = false
     var paragraphStrings = [String]()
@@ -95,6 +96,11 @@ class fifthYesPage: UIViewController {
         self.secondParagraph.adjustsFontSizeToFitWidth = false
     }
     
+    @IBAction func nextButtonClick(_ sender: Any) {
+                 
+             ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(["Appropriate PPE was used for the work order?":"YES"])
+             print("")
+         }
         
 
 

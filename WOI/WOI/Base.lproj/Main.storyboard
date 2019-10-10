@@ -1519,6 +1519,7 @@ work order?</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="TaZ-AS-ifG" eventType="touchUpInside" id="iE9-JU-HC2"/>
                                                     <segue destination="ngO-c3-RRW" kind="show" id="vlw-pi-jHi"/>
                                                 </connections>
                                             </button>
@@ -2511,6 +2512,7 @@ performed/completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="rD5-b7-Z37" eventType="touchUpInside" id="GWx-ct-Tt3"/>
                                                     <segue destination="ngO-c3-RRW" kind="show" id="dgg-m2-ybp"/>
                                                 </connections>
                                             </button>
@@ -4697,6 +4699,7 @@ was completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="Qcl-vD-Ism" eventType="touchUpInside" id="Cfz-hp-88C"/>
                                                     <segue destination="KHn-6b-s5n" kind="show" id="Ce3-eg-eBW"/>
                                                 </connections>
                                             </button>
@@ -4917,6 +4920,7 @@ was completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="d9A-ML-Bec" eventType="touchUpInside" id="cW2-nm-q8v"/>
                                                     <segue destination="KHn-6b-s5n" kind="show" id="PSX-cz-fLa"/>
                                                 </connections>
                                             </button>
@@ -5132,6 +5136,7 @@ was completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="Nbl-t0-Any" eventType="touchUpInside" id="BvM-dW-gAs"/>
                                                     <segue destination="KHn-6b-s5n" kind="show" id="w4H-eP-5In"/>
                                                 </connections>
                                             </button>
@@ -5324,6 +5329,7 @@ work zone?</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="vSK-wO-Vfu" eventType="touchUpInside" id="1DN-6t-5Wz"/>
                                                     <action selector="nextButtonClicked:" destination="vSK-wO-Vfu" eventType="touchUpInside" id="RAa-A9-5la"/>
                                                 </connections>
                                             </button>
@@ -5605,6 +5611,7 @@ was completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="ege-G4-KRE" eventType="touchUpInside" id="MjY-Zp-Caz"/>
                                                     <action selector="nextButtonClicked:" destination="ege-G4-KRE" eventType="touchUpInside" id="26I-AM-dSw"/>
                                                 </connections>
                                             </button>
@@ -5827,6 +5834,7 @@ was completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="09k-PP-Iml" eventType="touchUpInside" id="NxH-1s-aNz"/>
                                                     <action selector="nextButtonClicked:" destination="09k-PP-Iml" eventType="touchUpInside" id="1J0-GR-7gZ"/>
                                                 </connections>
                                             </button>
@@ -6499,6 +6507,7 @@ performed/completed</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
+                                                    <action selector="nextButtonClick:" destination="Gjq-vc-xMy" eventType="touchUpInside" id="zXA-K9-kYI"/>
                                                     <segue destination="ngO-c3-RRW" kind="show" id="cfP-bb-EAW"/>
                                                 </connections>
                                             </button>

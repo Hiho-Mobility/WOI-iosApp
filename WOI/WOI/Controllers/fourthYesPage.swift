@@ -8,6 +8,7 @@
 
 import UIKit
 import iOSDropDown
+import FirebaseDatabase
 
 class fourthYesPage:  UIViewController {
 
@@ -21,7 +22,7 @@ class fourthYesPage:  UIViewController {
     @IBOutlet var yesBorderBox: UIView!
     @IBOutlet var nextButton: UIButton!
     
-
+    var ref: DatabaseReference?
     
     var firstButtonClick = false
     var paragraphStrings = [String]()
@@ -32,6 +33,7 @@ class fourthYesPage:  UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        ref = Database.database().reference()
         
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
@@ -83,6 +85,12 @@ class fourthYesPage:  UIViewController {
           self.navigationController?.popToRootViewController(animated: true)
           
       }
+    
+    @IBAction func nextButtonClick(_ sender: Any) {
+              
+              ref?.child("Work Order: \(String(describing: futureReference))").child("fourthPage").setValue(["Work order process was followed?":"YES"])
+              print("")
+          }
     
     override func viewWillAppear(_ animated: Bool) {
         let fontSize1 = self.firstParagraph.getFontSizeForLabel()
