@@ -134,8 +134,19 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         futureReference = workOrderNumber.text
         ref?.child("Work Order: \(name)")
         
-       
+
         ref?.child("Work Order: \(String(describing: workOrderNumber.text))").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
+        
+        let date = Date()
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.medium
+
+        let str = dateFormatter.string(from: date)
+        print(str)
+    
+        ref?.child("Work Order: \(String(describing: futureReference))").child("date").setValue(["CurrentDate":str])
         
         presentingViewController?.dismiss(animated: true)
         

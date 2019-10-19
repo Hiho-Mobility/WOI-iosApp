@@ -177,7 +177,7 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     
     @IBAction func nextButtonClick(_ sender: Any) {
            
-           
+            
           
               self.inputVals["Technician had professional presentation?"] = "N/A"
               self.inputVals["Additional Comments"] = additionalCommentsBox.text
