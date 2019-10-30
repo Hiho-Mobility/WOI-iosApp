@@ -12,6 +12,7 @@ import FirebaseDatabase
 import FirebaseStorage
 
 
+public var dropDownValueSecond : String? = ""
 
 class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -43,6 +44,8 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     var imageSelected = [false, false, false]
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,27 +65,27 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
       
         
-   
+        self.setNext(val: dropDownValueSecond)
         
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
-                 
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
+        
+        dropDown.text = dropDownValueSecond
+        
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let secondYesPageController = storyBoard.instantiateViewController(withIdentifier: "secondYesPage")
             
-            self.navigationController?.pushViewController(secondYesPageController, animated: false)
-        }
-        else if selectedText == "NO"{
-            print("")
-        }
-        else{
+            dropDownValueSecond = selectedText
+            
+        if selectedText == "N/A"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let secondNAPageController = storyBoard.instantiateViewController(withIdentifier: "secondNAPage")
             self.navigationController?.pushViewController(secondNAPageController, animated: false)
         }
+        else {
+           self.nextButton.isEnabled = true
+        }
+         
         
         }
         // Do any additional setup after loading the view.
@@ -106,25 +109,30 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    func enableNext() -> Void {
-        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
-             self.nextButton.isEnabled = true
-        }else{
-             self.nextButton.isEnabled = false
+    func setNext(val:String?) -> Void {
+        if (val == "1" || val == "2" || val == "3" || val == "4" || val == "5" ){
+            self.nextButton.isEnabled = true
         }
-        
     }
+    
+//    func enableNext() -> Void {
+//        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
+//             self.nextButton.isEnabled = true
+//        }else{
+//             self.nextButton.isEnabled = false
+//        }
+//
+//    }
     @IBAction func firstButtonPressed(_ sender: Any) {
         
            if firstButtonClick == true{
             firstButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }else{
                 firstButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }
         
         
@@ -135,11 +143,11 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         if secondButtonClick == true{
             secondButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+           
         }else{
             secondButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+           
         }
     }
     
@@ -149,11 +157,11 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         if thirdButtonClick == true{
             thirdButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            thirdButtonClick = !thirdButtonClick
-            enableNext()
+           
        }else{
            thirdButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            thirdButtonClick = !thirdButtonClick
-           enableNext()
+           
        }
     }
     
@@ -255,7 +263,7 @@ class secondNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
          
          
          
-         self.inputVals["Scope of work (SOW) was accurately achieved?"] = "NO"
+         self.inputVals["Scope of work (SOW) was accurately achieved?"] = dropDownValueSecond
          self.inputVals["Additional Comments"] = additionalCommentsBox.text
          
          if additionalCommentsBox.text == "Additional Comments"{

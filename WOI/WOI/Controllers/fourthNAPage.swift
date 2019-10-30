@@ -55,20 +55,21 @@ class fourthNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         
         
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
         
+        dropDown.text = dropDownValueFourth
         
-        
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let fourthYesPageController = storyBoard.instantiateViewController(withIdentifier: "fourthYesPage")
-            self.navigationController?.pushViewController(fourthYesPageController, animated: false)
+            
+            dropDownValueFourth = selectedText
+            
+        if selectedText == "N/A"{
+            print("")
             
         }
-        else if selectedText == "NO"{
+        else {
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let fourthNoPageController = storyBoard.instantiateViewController(withIdentifier: "fourthNoPage")
@@ -76,11 +77,11 @@ class fourthNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
            
         }
-        else{
-            print("")
-        }
         
         }
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }

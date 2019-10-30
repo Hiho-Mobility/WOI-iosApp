@@ -53,20 +53,21 @@ class sixthNAPage:  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         
         
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
         
+        dropDown.text = dropDownValueSixth
         
-        
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let fourthYesPageController = storyBoard.instantiateViewController(withIdentifier: "fourthYesPage")
-            self.navigationController?.pushViewController(fourthYesPageController, animated: false)
+            
+            dropDownValueSixth = selectedText
+            
+        if selectedText == "N/A"{
+            print("")
             
         }
-        else if selectedText == "NO"{
+        else {
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let fourthNoPageController = storyBoard.instantiateViewController(withIdentifier: "fourthNoPage")
@@ -74,11 +75,10 @@ class sixthNAPage:  UIViewController, UIImagePickerControllerDelegate, UINavigat
 
            
         }
-        else{
-            print("")
-        }
         
         }
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -98,16 +98,6 @@ class sixthNAPage:  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
     }
     
-    @IBAction func nextButtonClicked(_ sender: Any) {
-        let finishedSurveyAC = UIAlertController(title: "Success!", message: "Form was submitted successfully!", preferredStyle: .alert)
-        finishedSurveyAC.addAction(UIAlertAction(title: "OK", style: .default, handler: restartApp) )
-        self.present(finishedSurveyAC, animated: true)
-        
-    }
-    
-    func restartApp(action: UIAlertAction!){
-        navigationController?.popToRootViewController(animated: true)
-    }
     
     
     @IBAction func imagePick(_ sender: Any) {

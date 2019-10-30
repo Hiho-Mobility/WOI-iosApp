@@ -11,6 +11,9 @@ import iOSDropDown
 import FirebaseDatabase
 import FirebaseStorage
 
+public var dropDownValueSixth : String? = ""
+
+
 class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     @IBOutlet var firstButton: UIButton!
@@ -70,29 +73,31 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
         noBorderBox.layer.cornerRadius = 5
         
         
+        self.setNext(val: dropDownValueSixth)
         
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
         
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
-                 
+        dropDown.text = dropDownValueSixth
+        
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let sixthYesPageController = storyBoard.instantiateViewController(withIdentifier: "sixthYesPage")
             
-            self.navigationController?.pushViewController(sixthYesPageController, animated: false)
-        }
-        else if selectedText == "NO"{
-            print("")
-        }
-        else{
+            dropDownValueSixth = selectedText
+            
+        if selectedText == "N/A"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let sixthNAPageController = storyBoard.instantiateViewController(withIdentifier: "sixthNAPage")
             self.navigationController?.pushViewController(sixthNAPageController, animated: false)
         }
+        else {
+           self.nextButton.isEnabled = true
+        }
+         
         
         }
+
+        
         // Do any additional setup after loading the view.
         
         self.hideKeyboardWhenTappedAround()
@@ -114,36 +119,27 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    @IBAction func nextButtonClicked(_ sender: Any) {
-        let finishedSurveyAC = UIAlertController(title: "Success!", message: "Form was submitted successfully!", preferredStyle: .alert)
-        finishedSurveyAC.addAction(UIAlertAction(title: "OK", style: .default, handler: restartApp) )
-        self.present(finishedSurveyAC, animated: true)
-        
-    }
-    
-    func restartApp(action: UIAlertAction!){
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    func enableNext() -> Void {
-        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true || fourthButtonClick == true  {
-             self.nextButton.isEnabled = true
-        }else{
-            self.nextButton.isEnabled = false
+    func setNext(val:String?) -> Void {
+        if (val == "1" || val == "2" || val == "3" || val == "4" || val == "5" ){
+            self.nextButton.isEnabled = true
         }
-        
     }
+    
+    
+    
+    
+    
+    
     @IBAction func firstButtonPressed(_ sender: Any) {
         
            if firstButtonClick == true{
             firstButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }else{
                 firstButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }
         
         
@@ -154,11 +150,11 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if secondButtonClick == true{
             secondButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }else{
             secondButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }
     }
     
@@ -168,11 +164,11 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if thirdButtonClick == true{
             thirdButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            thirdButtonClick = !thirdButtonClick
-            enableNext()
+            
        }else{
            thirdButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            thirdButtonClick = !thirdButtonClick
-           enableNext()
+           
        }
     }
     
@@ -180,11 +176,11 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
         if fourthButtonClick == true{
            fourtButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            fourthButtonClick = !fourthButtonClick
-           enableNext()
+           
        }else{
            fourtButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            fourthButtonClick = !fourthButtonClick
-           enableNext()
+           
        }
     }
     
@@ -294,7 +290,7 @@ class sixthNoPage:UIViewController, UIImagePickerControllerDelegate, UINavigatio
          
          
          
-         self.inputVals["Job site was presented to be a safe work zone?"] = "NO"
+         self.inputVals["Job site was presented to be a safe work zone?"] = dropDownValueSixth
          self.inputVals["Additional Comments"] = additionalCommentsBox.text
          
          if additionalCommentsBox.text == "Additional Comments"{

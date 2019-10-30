@@ -52,21 +52,21 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         self.hideKeyboardWhenTappedAround()
         
         
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
         
+        dropDown.text = dropDownValueThird
         
-        
-        
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let thirdYesPageController = storyBoard.instantiateViewController(withIdentifier: "thirdYesPage")
-            self.navigationController?.pushViewController(thirdYesPageController, animated: false)
+            
+            dropDownValueThird = selectedText
+            
+        if selectedText == "N/A"{
+            print("")
             
         }
-        else if selectedText == "NO"{
+        else {
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let thirdNoPageController = storyBoard.instantiateViewController(withIdentifier: "thirdNoPage")
@@ -74,11 +74,12 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
 
            
         }
-        else{
-            print("")
-        }
         
         }
+        
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }

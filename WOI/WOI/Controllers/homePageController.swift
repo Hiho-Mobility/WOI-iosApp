@@ -154,6 +154,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
             let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "firstPageAlternate")
             self.navigationController?.pushViewController(firstPageAlternateController, animated: false)
         }else{
+            dropDownValue = "--CHOOSE NOW--"
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
             self.navigationController?.pushViewController(firstNoPageController, animated: false)

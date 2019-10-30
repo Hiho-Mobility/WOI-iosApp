@@ -38,6 +38,7 @@
 		3F8B6E4D234D8D0C00071C40 /* thirdNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */; };
 		3FA3A50F234D2ADA00AC71F4 /* firstNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */; };
 		3FA3A517234D350800AC71F4 /* iOSDropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA3A516234D350800AC71F4 /* iOSDropDown.framework */; };
+		3FD785542369FE43005E9919 /* finalPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD785532369FE43005E9919 /* finalPage.swift */; };
 		3FF88753234D6530007646FE /* secondNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88752234D6530007646FE /* secondNoPage.swift */; };
 		3FF88755234D659F007646FE /* secondNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF88754234D659F007646FE /* secondNAPage.swift */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,7 @@
 		3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdNAPage.swift; sourceTree = "<group>"; };
 		3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNAPage.swift; sourceTree = "<group>"; };
 		3FA3A516234D350800AC71F4 /* iOSDropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSDropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD785532369FE43005E9919 /* finalPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalPage.swift; sourceTree = "<group>"; };
 		3FF88752234D6530007646FE /* secondNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondNoPage.swift; sourceTree = "<group>"; };
 		3FF88754234D659F007646FE /* secondNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondNAPage.swift; sourceTree = "<group>"; };
 		6C171E02F6677ACC98BEECCC /* Pods_WOI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WOI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,27 +146,17 @@
 				3F5FA053234677CA00C2E14F /* homePageController.swift */,
 				3F64629B234A6FC8005C8C57 /* firstNoPage.swift */,
 				3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */,
-				3F7C5138234D540200EF2055 /* firstBasePage.swift */,
-				3F7C513A234D611E00EF2055 /* secondBasePage.swift */,
-				3F7C513C234D61AC00EF2055 /* secondYesPage.swift */,
 				3FF88752234D6530007646FE /* secondNoPage.swift */,
 				3FF88754234D659F007646FE /* secondNAPage.swift */,
-				3F8B6E46234D8AC300071C40 /* thirdBasePage.swift */,
-				3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */,
 				3F8B6E4A234D8CC600071C40 /* thirdNoPage.swift */,
 				3F8B6E4C234D8D0C00071C40 /* thirdNAPage.swift */,
-				3F5EBEA5234E19BC001A1FEF /* fourthBasePage.swift */,
-				3F5EBEA7234E1C64001A1FEF /* fourthYesPage.swift */,
 				3F5EBEA9234E1EBB001A1FEF /* fourthNoPage.swift */,
 				3F5EBEAB234E20D8001A1FEF /* fourthNAPage.swift */,
-				3F5EBEAD234E2374001A1FEF /* fifthBasePage.swift */,
-				3F5EBEAF234E25C3001A1FEF /* fifthYesPage.swift */,
 				3F5EBEB1234E2949001A1FEF /* fifthNoPage.swift */,
 				3F5EBEB3234E2B7F001A1FEF /* fifthNAPage.swift */,
-				3F5EBEB5234E3AE7001A1FEF /* sixthBasePage.swift */,
-				3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */,
 				3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */,
 				3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */,
+				3FD785532369FE43005E9919 /* finalPage.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -172,7 +164,18 @@
 		3F5FA05023463D7300C2E14F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F7C5138234D540200EF2055 /* firstBasePage.swift */,
+				3F7C513A234D611E00EF2055 /* secondBasePage.swift */,
 				3F5FA055234677D800C2E14F /* homePageFields.swift */,
+				3F7C513C234D61AC00EF2055 /* secondYesPage.swift */,
+				3F8B6E46234D8AC300071C40 /* thirdBasePage.swift */,
+				3F8B6E48234D8C5A00071C40 /* thirdYesPage.swift */,
+				3F5EBEA5234E19BC001A1FEF /* fourthBasePage.swift */,
+				3F5EBEA7234E1C64001A1FEF /* fourthYesPage.swift */,
+				3F5EBEAD234E2374001A1FEF /* fifthBasePage.swift */,
+				3F5EBEAF234E25C3001A1FEF /* fifthYesPage.swift */,
+				3F5EBEB5234E3AE7001A1FEF /* sixthBasePage.swift */,
+				3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				3F5EBEB2234E2949001A1FEF /* fifthNoPage.swift in Sources */,
 				3F8B6E4D234D8D0C00071C40 /* thirdNAPage.swift in Sources */,
 				3F5EBEA8234E1C64001A1FEF /* fourthYesPage.swift in Sources */,
+				3FD785542369FE43005E9919 /* finalPage.swift in Sources */,
 				3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */,
 				3F5EBEB4234E2B7F001A1FEF /* fifthNAPage.swift in Sources */,
 				3F3C2A342343A5D70043CE67 /* AppDelegate.swift in Sources */,

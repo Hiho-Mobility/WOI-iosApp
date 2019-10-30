@@ -52,21 +52,24 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
         self.hideKeyboardWhenTappedAround()
         
-        
+        dropDown.text = dropDownValue
         
         dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
         dropDown.optionIds = [1,2,3,4,5,6]
                  
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "NO"{
+            
+            dropDownValue = selectedText
+        if selectedText == "N/A"{
           //  self.nextButton.isEnabled = false
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
-            self.navigationController?.pushViewController(firstNoPageController, animated: false)
+            print("")
+           
         }
         else{
-             print("")
+             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+             let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
+             self.navigationController?.pushViewController(firstNoPageController, animated: false)
         }
             
             

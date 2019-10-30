@@ -11,7 +11,7 @@ import iOSDropDown
 import FirebaseDatabase
 import FirebaseStorage
 
-public var dropDownValue : String?
+public var dropDownValue : String? = ""
 
 class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -42,7 +42,7 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     var thirdButtonClick = false
     
     var imageSelected = [false, false, false]
-    var dropDownValue = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,14 +64,18 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         noBorderBox.layer.cornerRadius = 5
         
       
-        
+        self.setNext(val: dropDownValue)
         
         
         dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
         dropDown.optionIds = [1,2,3,4,5,6]
+        
+        dropDown.text = dropDownValue
                  
         dropDown.didSelect{
            (selectedText , index ,id) in
+            
+             dropDownValue = selectedText
         if selectedText == "N/A"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
@@ -81,7 +85,7 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
             self.nextButton.isEnabled = true
         }
 
-            self.dropDownValue = selectedText
+           
         
         }
         // Do any additional setup after loading the view.
@@ -100,6 +104,12 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func setNext(val:String?) -> Void {
+        if (val == "1" || val == "2" || val == "3" || val == "4" || val == "5" ){
+            self.nextButton.isEnabled = true
+        }
+    }
 
     @objc func homeButtonTapped(){
         self.navigationController?.popToRootViewController(animated: true)

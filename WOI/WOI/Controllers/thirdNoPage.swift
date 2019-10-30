@@ -11,6 +11,8 @@ import iOSDropDown
 import FirebaseDatabase
 import FirebaseStorage
 
+public var dropDownValueThird : String? = ""
+
 class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
     @IBOutlet var firstButton: UIButton!
@@ -75,29 +77,31 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         cautionPara.layer.cornerRadius = 5
         
         
+        self.setNext(val: dropDownValueThird)
         
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
         
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
-                 
+        dropDown.text = dropDownValueThird
+        
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let thirdYesPageController = storyBoard.instantiateViewController(withIdentifier: "thirdYesPage")
             
-            self.navigationController?.pushViewController(thirdYesPageController, animated: false)
-        }
-        else if selectedText == "NO"{
-            print("")
-        }
-        else{
+            dropDownValueThird = selectedText
+            
+        if selectedText == "N/A"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let thirdNAPageController = storyBoard.instantiateViewController(withIdentifier: "thirdNAPage")
             self.navigationController?.pushViewController(thirdNAPageController, animated: false)
         }
+        else {
+           self.nextButton.isEnabled = true
+        }
+         
         
         }
+        
+        
         // Do any additional setup after loading the view.
         
         self.hideKeyboardWhenTappedAround()
@@ -119,25 +123,23 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         self.navigationController?.popToRootViewController(animated: true)
         
     }
-    
-    func enableNext() -> Void {
-        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true || fourthButtonClick == true || fifthButtonClick == true {
-             self.nextButton.isEnabled = true
-        }else{
-            self.nextButton.isEnabled = false
+    func setNext(val:String?) -> Void {
+        if (val == "1" || val == "2" || val == "3" || val == "4" || val == "5" ){
+            self.nextButton.isEnabled = true
         }
-        
     }
+    
+   
     @IBAction func firstButtonPressed(_ sender: Any) {
         
            if firstButtonClick == true{
             firstButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }else{
                 firstButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }
         
         
@@ -148,11 +150,11 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if secondButtonClick == true{
             secondButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }else{
             secondButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }
     }
     
@@ -162,11 +164,11 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if thirdButtonClick == true{
             thirdButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            thirdButtonClick = !thirdButtonClick
-            enableNext()
+            
        }else{
            thirdButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            thirdButtonClick = !thirdButtonClick
-           enableNext()
+           
        }
     }
     
@@ -174,11 +176,11 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if fourthButtonClick == true{
            fourtButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            fourthButtonClick = !fourthButtonClick
-           enableNext()
+          
        }else{
            fourtButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            fourthButtonClick = !fourthButtonClick
-           enableNext()
+          
        }
     }
     
@@ -187,11 +189,11 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if fifthButtonClick == true{
            fifthButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            fifthButtonClick = !fifthButtonClick
-           enableNext()
+           
        }else{
            fifthButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            fifthButtonClick = !fifthButtonClick
-           enableNext()
+           
        }
     }
     
@@ -307,7 +309,7 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
         
         
-        self.inputVals["The work performed was of Stanford,Facilities Operations and Trade Specific quality?"] = "NO"
+        self.inputVals["The work performed was of Stanford,Facilities Operations and Trade Specific quality?"] = dropDownValueThird
         self.inputVals["Additional Comments"] = additionalCommentsBox.text
         
         if additionalCommentsBox.text == "Additional Comments"{

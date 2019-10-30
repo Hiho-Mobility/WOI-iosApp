@@ -57,26 +57,27 @@ class secondNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         
         
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
+        
+        dropDown.text = dropDownValueSecond
+        
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let secondYesPageController = storyBoard.instantiateViewController(withIdentifier: "secondYesPage")
-            self.navigationController?.pushViewController(secondYesPageController, animated: false)
+            
+            dropDownValueSecond = selectedText
+            
+        if selectedText == "N/A"{
+            print("")
             
         }
-        else if selectedText == "NO"{
+        else {
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let secondNoPageController = storyBoard.instantiateViewController(withIdentifier: "secondNoPage")
             self.navigationController?.pushViewController(secondNoPageController, animated: false)
 
            
-        }
-        else{
-            print("")
         }
         
         }
