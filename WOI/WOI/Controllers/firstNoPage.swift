@@ -11,6 +11,7 @@ import iOSDropDown
 import FirebaseDatabase
 import FirebaseStorage
 
+public var dropDownValue : String?
 
 class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -41,6 +42,7 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     var thirdButtonClick = false
     
     var imageSelected = [false, false, false]
+    var dropDownValue = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,31 +67,27 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
         
         
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
                  
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstYesPageController = storyBoard.instantiateViewController(withIdentifier: "firstYesPage")
-            
-            self.navigationController?.pushViewController(firstYesPageController, animated: false)
-        }
-        else if selectedText == "NO"{
-            print("")
-        }
-        else{
+        if selectedText == "N/A"{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
             self.navigationController?.pushViewController(firstNAPageController, animated: false)
         }
+        else{
+            self.nextButton.isEnabled = true
+        }
+
+            self.dropDownValue = selectedText
         
         }
         // Do any additional setup after loading the view.
         
         self.hideKeyboardWhenTappedAround()
-        
+
     }
     
 
@@ -108,20 +106,20 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
     }
     
-    func enableNext() -> Void {
-        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
-             self.nextButton.isEnabled = true
-        }else{
-             self.nextButton.isEnabled = false
-        }
-        
-    }
+//    func enableNext() -> Void {
+//        if firstButtonClick == true || secondButtonClick == true || thirdButtonClick == true {
+//             self.nextButton.isEnabled = true
+//        }else{
+//             self.nextButton.isEnabled = false
+//        }
+//
+//    }
     
     @IBAction func nextButtonClick(_ sender: Any) {
         
+        print(dropDownValue)
         
-        
-        self.inputVals["Technician had professional presentation?"] = "NO"
+        self.inputVals["Technician had professional presentation?"] = dropDownValue
         self.inputVals["Additional Comments"] = additionalCommentsBox.text
         
         if additionalCommentsBox.text == "Additional Comments"{
@@ -242,11 +240,11 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
            if firstButtonClick == true{
             firstButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+            
             }else{
                 firstButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
                 firstButtonClick = !firstButtonClick
-            enableNext()
+    
             }
         
         
@@ -257,11 +255,11 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if secondButtonClick == true{
             secondButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }else{
             secondButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
             secondButtonClick = !secondButtonClick
-            enableNext()
+            
         }
     }
     
@@ -271,11 +269,11 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         if thirdButtonClick == true{
             thirdButton.setImage(UIImage(named: "checkBoxOUTLINE "), for: .normal)
            thirdButtonClick = !thirdButtonClick
-            enableNext()
+            
        }else{
            thirdButton.setImage(UIImage(named: "checkBoxFILLED"), for: .normal)
            thirdButtonClick = !thirdButtonClick
-           enableNext()
+          
        }
     }
     
@@ -380,4 +378,16 @@ class firstNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
 
 
     
+}
+
+extension UILabel {
+    func getFontSizeForLabel() -> CGFloat {
+        let text: NSMutableAttributedString = NSMutableAttributedString(attributedString: self.attributedText!)
+        text.setAttributes([NSAttributedString.Key.font: self.font!], range: NSMakeRange(0, text.length))
+        let context: NSStringDrawingContext = NSStringDrawingContext()
+        context.minimumScaleFactor = self.minimumScaleFactor
+        text.boundingRect(with: self.frame.size, options: NSStringDrawingOptions.usesLineFragmentOrigin, context: context)
+        let adjustedFontSize: CGFloat = self.font.pointSize * context.actualScaleFactor
+        return adjustedFontSize
+    }
 }

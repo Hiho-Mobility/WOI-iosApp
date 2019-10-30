@@ -26,7 +26,6 @@
 		3F5EBEB8234E3B27001A1FEF /* sixthYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */; };
 		3F5EBEBA234E3B55001A1FEF /* sixthNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */; };
 		3F5EBEBC234E3B91001A1FEF /* sixthNAPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */; };
-		3F5FA0522346758F00C2E14F /* firstYesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA0512346758F00C2E14F /* firstYesPage.swift */; };
 		3F5FA054234677CA00C2E14F /* homePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA053234677CA00C2E14F /* homePageController.swift */; };
 		3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FA055234677D800C2E14F /* homePageFields.swift */; };
 		3F64629C234A6FC8005C8C57 /* firstNoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F64629B234A6FC8005C8C57 /* firstNoPage.swift */; };
@@ -64,7 +63,6 @@
 		3F5EBEB7234E3B27001A1FEF /* sixthYesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthYesPage.swift; sourceTree = "<group>"; };
 		3F5EBEB9234E3B55001A1FEF /* sixthNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthNoPage.swift; sourceTree = "<group>"; };
 		3F5EBEBB234E3B91001A1FEF /* sixthNAPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sixthNAPage.swift; sourceTree = "<group>"; };
-		3F5FA0512346758F00C2E14F /* firstYesPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = firstYesPage.swift; sourceTree = "<group>"; };
 		3F5FA053234677CA00C2E14F /* homePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageController.swift; sourceTree = "<group>"; };
 		3F5FA055234677D800C2E14F /* homePageFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = homePageFields.swift; sourceTree = "<group>"; };
 		3F64629B234A6FC8005C8C57 /* firstNoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNoPage.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				3F5FA053234677CA00C2E14F /* homePageController.swift */,
-				3F5FA0512346758F00C2E14F /* firstYesPage.swift */,
 				3F64629B234A6FC8005C8C57 /* firstNoPage.swift */,
 				3FA3A50E234D2ADA00AC71F4 /* firstNAPage.swift */,
 				3F7C5138234D540200EF2055 /* firstBasePage.swift */,
@@ -332,7 +329,6 @@
 				3FA3A50F234D2ADA00AC71F4 /* firstNAPage.swift in Sources */,
 				3F5FA056234677D800C2E14F /* homePageFields.swift in Sources */,
 				3F7C5139234D540200EF2055 /* firstBasePage.swift in Sources */,
-				3F5FA0522346758F00C2E14F /* firstYesPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

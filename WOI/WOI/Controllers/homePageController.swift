@@ -149,8 +149,16 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         ref?.child("Work Order: \(String(describing: futureReference))").child("date").setValue(["CurrentDate":str])
         
         presentingViewController?.dismiss(animated: true)
+        if (whenDropdown.text == "Completed Job"){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "firstPageAlternate")
+            self.navigationController?.pushViewController(firstPageAlternateController, animated: false)
+        }else{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
+            self.navigationController?.pushViewController(firstNoPageController, animated: false)
+        }
         
-       // self.performSegue(withIdentifier: "homePageController", sender: self)
         
     }
         

@@ -54,35 +54,24 @@ class firstNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
         
         
-        
-        
-        dropDown.optionArray = ["YES", "NO" ,"N/A"]
-        dropDown.optionIds = [1,2,3]
+        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionIds = [1,2,3,4,5,6]
+                 
         dropDown.didSelect{
            (selectedText , index ,id) in
-        if selectedText == "YES"{
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstYesPageController = storyBoard.instantiateViewController(withIdentifier: "firstYesPage")
-            self.navigationController?.pushViewController(firstYesPageController, animated: false)
-            
-        }
-        else if selectedText == "NO"{
+        if selectedText == "NO"{
           //  self.nextButton.isEnabled = false
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
             self.navigationController?.pushViewController(firstNoPageController, animated: false)
-
-           
         }
         else{
-       //     self.nextButton.isEnabled = false
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNAPageController = storyBoard.instantiateViewController(withIdentifier: "firstNAPage")
-
-            self.navigationController?.pushViewController(firstNAPageController, animated: false)
+             print("")
+        }
+            
+            
         }
         
-        }
 
         // Do any additional setup after loading the view.
     }
