@@ -135,77 +135,84 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     //submit data to firebase
     @IBAction func addCaseInfo(_ sender: Any) {
         
-        guard let name = workOrderNumber.text else { return }
         
         
-        futureReference = workOrderNumber.text
-        ref?.child("Work Order: \(name)")
+        let continueToNextPage = moveOn()
         
+        if (continueToNextPage){
+            guard let name = workOrderNumber.text else { return }
+                futureReference = workOrderNumber.text
+                ref?.child("Work Order: \(name)")
+                
 
-        ref?.child("Work Order: \(String(describing: workOrderNumber.text))").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
-        
-        let date = Date()
+                ref?.child("Work Order: \(String(describing: workOrderNumber.text))").setValue(["Manager Name": managerNameDropdown.text, "Technician Name": evaluatedTechnician.text, "When": whenDropdown.text])
+                
+                let date = Date()
 
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = DateFormatter.Style.none
-        dateFormatter.dateStyle = DateFormatter.Style.medium
+                let dateFormatter = DateFormatter()
+                dateFormatter.timeStyle = DateFormatter.Style.none
+                dateFormatter.dateStyle = DateFormatter.Style.medium
 
-        let str = dateFormatter.string(from: date)
-        print(str)
-    
-        ref?.child("Work Order: \(String(describing: futureReference))").child("date").setValue(["CurrentDate":str])
+                let str = dateFormatter.string(from: date)
+                print(str)
+            
+                ref?.child("Work Order: \(String(describing: futureReference))").child("date").setValue(["CurrentDate":str])
 
-        presentingViewController?.dismiss(animated: true)
-        
-        //choose a path based on the text in the job completed bar
-        if (whenDropdown.text == "Completed Job"){
-            
-            alternatePage = true
-            self.inputVals.removeAll()
-            
-            self.inputVals["Technician had professional presentation?"] = "N/A"
-            self.inputVals["Additional Comments"] = ""
-            
-            ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(self.inputVals)
-            self.inputVals.removeAll()
-            
-            self.inputVals["Appropriate PPE was used for the work order?"] = "N/A"
-            self.inputVals["Additional Comments"] = ""
-            
-            ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(self.inputVals)
-            self.inputVals.removeAll()
-            
-            self.inputVals["Job site was presented to be a safe work zone?"] = "N/A"
-            self.inputVals["Additional Comments"] = ""
-            
-            ref?.child("Work Order: \(String(describing: futureReference))").child("sixthPage").setValue(self.inputVals)
-            
-            workOrderNumber.text = ""
-            evaluatedTechnician.text = ""
-            managerNameDropdown.text = ""
-            whenDropdown.text = ""
-            
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "secondNoPage")
-            self.navigationController?.pushViewController(firstPageAlternateController, animated: true)
-            
-            
+                presentingViewController?.dismiss(animated: true)
+                
+                //choose a path based on the text in the job completed bar
+                if (whenDropdown.text == "Completed Job"){
+                    
+                    alternatePage = true
+                    self.inputVals.removeAll()
+                    
+                    self.inputVals["Technician had professional presentation?"] = "N/A"
+                    self.inputVals["Additional Comments"] = ""
+                    
+                    ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(self.inputVals)
+                    self.inputVals.removeAll()
+                    
+                    self.inputVals["Appropriate PPE was used for the work order?"] = "N/A"
+                    self.inputVals["Additional Comments"] = ""
+                    
+                    ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(self.inputVals)
+                    self.inputVals.removeAll()
+                    
+                    self.inputVals["Job site was presented to be a safe work zone?"] = "N/A"
+                    self.inputVals["Additional Comments"] = ""
+                    
+                    ref?.child("Work Order: \(String(describing: futureReference))").child("sixthPage").setValue(self.inputVals)
+                    
+                    workOrderNumber.text = ""
+                    evaluatedTechnician.text = ""
+                    managerNameDropdown.text = ""
+                    whenDropdown.text = ""
+                    
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "secondNoPage")
+                    self.navigationController?.pushViewController(firstPageAlternateController, animated: true)
+                    
+                    
+                }else{
+                    dropDownValue = "--CHOOSE NOW--"
+                    workOrderNumber.text = ""
+                    evaluatedTechnician.text = ""
+                    managerNameDropdown.text = ""
+                    whenDropdown.text = ""
+                    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                    let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
+                    self.navigationController?.pushViewController(firstNoPageController, animated: true)
+                }
         }else{
-            dropDownValue = "--CHOOSE NOW--"
-            workOrderNumber.text = ""
-            evaluatedTechnician.text = ""
-            managerNameDropdown.text = ""
-            whenDropdown.text = ""
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
-            self.navigationController?.pushViewController(firstNoPageController, animated: true)
+            print ("")
         }
+        
         
         
     }
         
     //make sure all of the fields are entered before moving on
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+    func moveOn() -> Bool {
         
         var pass = true
         
