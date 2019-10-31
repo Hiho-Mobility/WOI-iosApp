@@ -15,14 +15,14 @@ public var alternatePage : Bool = false
 
 class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
-    
+    //declare outlets
     @IBOutlet var borderBox: UIView!
     @IBOutlet var workOrderNumber: UITextField!
     @IBOutlet var evaluatedTechnician: UITextField!
     @IBOutlet var managerNameDropdown: UITextField!
     @IBOutlet var whenDropdown: UITextField!
     
-    
+    //declare variables
     var inputVals = [String: Any]()
     var ref: DatabaseReference?
     
@@ -39,8 +39,11 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         // Do any additional setup after loading the view.
         
         
-        
+        //database reference initiated
         ref = Database.database().reference()
+        
+        
+        //setup nav bar and box ui
         navigationItem.title = "Work Order Inspections"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
         
@@ -52,11 +55,12 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         
     }
     
-    
+    //setup of image picker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //get count of items in the dropdowns
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         if currentTextField == managerNameDropdown{
@@ -71,7 +75,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
       
     }
    
-    
+    //display the names in the pickers
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         
@@ -88,6 +92,8 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         
         
     }
+    
+    //close the picker when done choosing
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         
@@ -108,7 +114,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         }
        
     }
-    
+    //when clicking the textflied, what happens
     func textFieldDidBeginEditing(_ textField: UITextField) {
         
         self.pickerView.delegate = self
@@ -126,6 +132,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         
     }
     
+    //submit data to firebase
     @IBAction func addCaseInfo(_ sender: Any) {
         
         guard let name = workOrderNumber.text else { return }
@@ -150,7 +157,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
 
         presentingViewController?.dismiss(animated: true)
         
-        
+        //choose a path based on the text in the job completed bar
         if (whenDropdown.text == "Completed Job"){
             
             alternatePage = true
@@ -197,7 +204,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         
     }
         
-    
+    //make sure all of the fields are entered before moving on
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         var pass = true
