@@ -11,6 +11,7 @@ import FirebaseDatabase
 
 
 public var futureReference : String?
+public var alternatePage : Bool = false
 
 class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDelegate, UIPickerViewDataSource {
     
@@ -22,7 +23,7 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     @IBOutlet var whenDropdown: UITextField!
     
     
-    
+    var inputVals = [String: Any]()
     var ref: DatabaseReference?
     
     var currentTextField = UITextField()
@@ -36,7 +37,6 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         
         
         
@@ -147,17 +147,51 @@ class homePageController: UIViewController, UIPickerViewDelegate, UITextFieldDel
         print(str)
     
         ref?.child("Work Order: \(String(describing: futureReference))").child("date").setValue(["CurrentDate":str])
-        
+
         presentingViewController?.dismiss(animated: true)
+        
+        
         if (whenDropdown.text == "Completed Job"){
+            
+            alternatePage = true
+            self.inputVals.removeAll()
+            
+            self.inputVals["Technician had professional presentation?"] = "N/A"
+            self.inputVals["Additional Comments"] = ""
+            
+            ref?.child("Work Order: \(String(describing: futureReference))").child("firstPage").setValue(self.inputVals)
+            self.inputVals.removeAll()
+            
+            self.inputVals["Appropriate PPE was used for the work order?"] = "N/A"
+            self.inputVals["Additional Comments"] = ""
+            
+            ref?.child("Work Order: \(String(describing: futureReference))").child("fifthPage").setValue(self.inputVals)
+            self.inputVals.removeAll()
+            
+            self.inputVals["Job site was presented to be a safe work zone?"] = "N/A"
+            self.inputVals["Additional Comments"] = ""
+            
+            ref?.child("Work Order: \(String(describing: futureReference))").child("sixthPage").setValue(self.inputVals)
+            
+            workOrderNumber.text = ""
+            evaluatedTechnician.text = ""
+            managerNameDropdown.text = ""
+            whenDropdown.text = ""
+            
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "firstPageAlternate")
-            self.navigationController?.pushViewController(firstPageAlternateController, animated: false)
+            let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "secondNoPage")
+            self.navigationController?.pushViewController(firstPageAlternateController, animated: true)
+            
+            
         }else{
             dropDownValue = "--CHOOSE NOW--"
+            workOrderNumber.text = ""
+            evaluatedTechnician.text = ""
+            managerNameDropdown.text = ""
+            whenDropdown.text = ""
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "firstNoPage")
-            self.navigationController?.pushViewController(firstNoPageController, animated: false)
+            self.navigationController?.pushViewController(firstNoPageController, animated: true)
         }
         
         

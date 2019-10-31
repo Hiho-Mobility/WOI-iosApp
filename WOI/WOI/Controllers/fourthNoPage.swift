@@ -65,6 +65,7 @@ class fourthNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
 
+        dropDownValueThird = ""
         
     
         additionalCommentsBox.delegate = self
@@ -78,7 +79,7 @@ class fourthNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         self.setNext(val: dropDownValueFourth)
         
-        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionArray = ["N/A", "5", "4", "3", "2", "1"]
         dropDown.optionIds = [1,2,3,4,5,6]
         
         dropDown.text = dropDownValueFourth
@@ -405,6 +406,17 @@ class fourthNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
           }
         }
         
+        if (alternatePage){
+            
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "finalPage")
+                self.navigationController?.pushViewController(firstPageAlternateController, animated: true)
+        }else{
+
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "fifthNoPage")
+            self.navigationController?.pushViewController(firstNoPageController, animated: true)
+        }
         
         print("")
     }

@@ -34,6 +34,9 @@ class finalPage:UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         ref = Database.database().reference()
              
+        dropDownValueSixth = ""
+        dropDownValueFourth = ""
+        
         additionalCommentsBox.delegate = self
         additionalCommentsBox.text = "Additional Comments"
         additionalCommentsBox.textColor = UIColor.lightGray
@@ -99,7 +102,7 @@ class finalPage:UIViewController, UIImagePickerControllerDelegate, UINavigationC
               
               ref?.child("Work Order: \(String(describing: futureReference))").child("finalPage").setValue(self.inputVals)
               
-              
+              alternatePage = false
               print("")
           }
     

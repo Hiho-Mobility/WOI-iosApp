@@ -52,7 +52,7 @@ class fifthNAPage:  UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         
         
-        dropDown.optionArray = ["1", "2", "3", "4", "5", "N/A"]
+        dropDown.optionArray = ["N/A", "5", "4", "3", "2", "1"]
         dropDown.optionIds = [1,2,3,4,5,6]
         
         dropDown.text = dropDownValueFifth
