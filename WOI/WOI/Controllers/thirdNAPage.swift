@@ -213,8 +213,7 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
       
                 })
             }
-            
-      
+     
         }
 
         if imageSelected[1] {
@@ -240,7 +239,6 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
                   if let metaImageUrl = url?.absoluteString {
                       self.ref?.child("Work Order: \(String(describing: futureReference))").child("thirdPage").child("pic2").setValue(metaImageUrl)
                   }
-    
               })
           }
         }
@@ -269,13 +267,10 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
                   if let metaImageUrl = url?.absoluteString {
                       self.ref?.child("Work Order: \(String(describing: futureReference))").child("thirdPage").child("pic3").setValue(metaImageUrl)
                   }
-    
               })
           }
         }
-        
-        
-        print("")
+
     }
     
 
