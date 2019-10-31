@@ -214,9 +214,7 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
                 })
             }
             
-            
-            
-            
+      
         }
 
         if imageSelected[1] {
