@@ -277,7 +277,17 @@ class fourthNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
               })
           }
         }
-        
+        if (alternatePage){
+            
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let firstPageAlternateController = storyBoard.instantiateViewController(withIdentifier: "finalPage")
+                self.navigationController?.pushViewController(firstPageAlternateController, animated: true)
+        }else{
+
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let firstNoPageController = storyBoard.instantiateViewController(withIdentifier: "fifthNoPage")
+            self.navigationController?.pushViewController(firstNoPageController, animated: true)
+        }
         
         print("")
     }

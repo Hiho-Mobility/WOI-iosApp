@@ -860,7 +860,6 @@ shoes worn</string>
         <!--View Controller-->
         <scene sceneID="cvg-ye-W7M">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="81P-gx-T7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="firstPageAlternate" id="nCL-Q2-LAs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="91p-jP-Agr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
@@ -1049,6 +1048,7 @@ shoes worn</string>
                     <navigationItem key="navigationItem" id="u0S-rZ-MZ0"/>
                     <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81P-gx-T7N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-136849" y="-2376"/>
         </scene>
@@ -1927,27 +1927,27 @@ material/service provider)</string>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="517-Lu-tIQ">
-                                                <rect key="frame" x="8" y="92" width="382" height="500"/>
+                                                <rect key="frame" x="8" y="90.5" width="382" height="500"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="m3V-Vk-nat">
-                                                        <rect key="frame" x="0.0" y="111" width="35" height="277.5"/>
+                                                        <rect key="frame" x="0.0" y="112.5" width="22" height="274.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3E-Z0-ut2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="35" height="44"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="firstButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="5k9-iT-gqu"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-Q3-f7g">
-                                                                <rect key="frame" x="0.0" y="167.5" width="35" height="44"/>
+                                                                <rect key="frame" x="0.0" y="167.5" width="22" height="22"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="secondButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="kDE-NX-0Cj"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yf-wr-viJ">
-                                                                <rect key="frame" x="0.0" y="233.5" width="35" height="44"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="22" height="41"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="thirdButtonPressed:" destination="aRP-hE-lZj" eventType="touchUpInside" id="Khw-AZ-lJm"/>
@@ -1956,7 +1956,7 @@ material/service provider)</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="TvL-0d-3bj">
-                                                        <rect key="frame" x="35" y="111" width="347" height="277.5"/>
+                                                        <rect key="frame" x="35" y="112.5" width="347" height="274.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGR-Pu-qFk">
                                                                 <rect key="frame" x="0.0" y="0.0" width="322.5" height="142.5"/>
@@ -1987,7 +1987,7 @@ shoes worn</string>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="zan-iV-BRv">
-                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="44"/>
+                                                                <rect key="frame" x="0.0" y="233.5" width="267.5" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="VOW-du-b9V"/>
                                                                 </constraints>
@@ -2017,7 +2017,7 @@ shoes worn</string>
                                                 <state key="normal" title="Next"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XHV-5L-npu">
-                                                <rect key="frame" x="8" y="510.5" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="507.5" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="fg0-Id-81W"/>
                                                 </constraints>
@@ -2035,7 +2035,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Dzr-ZE-nfe">
-                                                <rect key="frame" x="8" y="548.5" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="545.5" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-6E-lzJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -2074,7 +2074,7 @@ shoes worn</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OSY-vu-Be9">
-                                                <rect key="frame" x="8" y="618.5" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="615.5" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="hSl-Yx-ENa"/>
                                                 </constraints>
@@ -2083,7 +2083,7 @@ shoes worn</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yJP-kh-juo">
-                                                <rect key="frame" x="8" y="663.5" width="382" height="165.5"/>
+                                                <rect key="frame" x="8" y="660.5" width="382" height="168.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="4TD-1h-T5m"/>
@@ -5081,7 +5081,7 @@ Score out of 5 (highest score is 5)</string>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
                                                     <action selector="nextButtonClick:" destination="vSK-wO-Vfu" eventType="touchUpInside" id="1DN-6t-5Wz"/>
-                                                    <segue destination="BX9-UZ-YKR" kind="show" id="iRo-VM-SeX"/>
+                                                    <segue destination="BX9-UZ-YKR" kind="show" id="UUz-vb-1I7"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rVB-C9-7ey">
@@ -6643,7 +6643,7 @@ shoes worn</string>
         <image name="checkBoxOUTLINE " width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kwE-As-4WJ"/>
+        <segue reference="UUz-vb-1I7"/>
         <segue reference="e8S-xd-vGa"/>
         <segue reference="Qtd-de-bKF"/>
         <segue reference="4XD-mB-XfU"/>
