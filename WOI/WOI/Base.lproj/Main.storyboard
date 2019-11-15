@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zaL-h0-3EZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zaL-h0-3EZ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -220,6 +220,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="30y-yU-llU">
@@ -507,6 +508,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsL-wp-0AQ">
@@ -1285,6 +1287,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-6a-cVF">
@@ -2219,6 +2222,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dx7-St-WN5">
@@ -2888,6 +2892,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="u3h-lT-YQl">
@@ -3176,6 +3181,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jz5-F9-WVF">
@@ -3576,7 +3582,7 @@ material/service provider)</string>
                                 <rect key="frame" x="8" y="-10" width="398" height="1067"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VT-R0-o4s">
-                                        <rect key="frame" x="0.0" y="30" width="398" height="1082"/>
+                                        <rect key="frame" x="0.0" y="30" width="398" height="996"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Pve-Aa-M9W">
                                                 <rect key="frame" x="8" y="23" width="382" height="60"/>
@@ -3610,13 +3616,14 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Cc-JU-ltx">
-                                                <rect key="frame" x="8" y="160.5" width="382" height="650"/>
+                                                <rect key="frame" x="8" y="117.5" width="382" height="650"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="equalCentering" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="a7m-wk-f3k">
-                                                        <rect key="frame" x="0.0" y="107.5" width="22" height="435"/>
+                                                        <rect key="frame" x="0.0" y="150.5" width="22" height="349"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esP-vK-udD">
                                                                 <rect key="frame" x="0.0" y="0.0" width="22" height="77"/>
@@ -3647,7 +3654,7 @@ Score out of 5 (highest score is 5)</string>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hT-F4-Y1F">
-                                                                <rect key="frame" x="0.0" y="374" width="22" height="61"/>
+                                                                <rect key="frame" x="0.0" y="288" width="22" height="61"/>
                                                                 <state key="normal" image="checkBoxOUTLINE "/>
                                                                 <connections>
                                                                     <action selector="fifthButtonPressed:" destination="SzC-AS-dBM" eventType="touchUpInside" id="JTX-tP-VFz"/>
@@ -3656,7 +3663,7 @@ Score out of 5 (highest score is 5)</string>
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="E0B-0q-vsl">
-                                                        <rect key="frame" x="35" y="107.5" width="347" height="435"/>
+                                                        <rect key="frame" x="35" y="150.5" width="347" height="349"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Signs of work debris residue (i.e. stains, clippings, soils, zip ties, dust, drips, spills, fingerprints)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUy-75-Q8a">
                                                                 <rect key="frame" x="0.0" y="0.0" width="332.5" height="77"/>
@@ -3695,19 +3702,8 @@ Score out of 5 (highest score is 5)</string>
                                                                 <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-pM-rcB">
-                                                                <rect key="frame" x="0.0" y="288" width="331.5" height="61"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="LqD-fm-zlj"/>
-                                                                </constraints>
-                                                                <string key="text">WILL NOT COUNT AGAINST TECHNICIAN:
-PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
-                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                                <color key="textColor" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material was incorrectly ordered/delivered (this option will reflect on the material/service provider)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-K1-izz">
-                                                                <rect key="frame" x="0.0" y="374" width="335" height="61"/>
+                                                                <rect key="frame" x="0.0" y="288" width="335" height="61"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="1HG-mI-K7Y"/>
                                                                 </constraints>
@@ -3730,7 +3726,7 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyL-em-c2t">
-                                                <rect key="frame" x="337" y="1042" width="41" height="20"/>
+                                                <rect key="frame" x="337" y="956" width="41" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="DWt-42-QKM"/>
                                                 </constraints>
@@ -3742,7 +3738,7 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Optional: take picture (3 maximum)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1ya-sI-Xp7">
-                                                <rect key="frame" x="8" y="733" width="383" height="20"/>
+                                                <rect key="frame" x="8" y="647" width="383" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="Vy5-Yk-ueY"/>
                                                 </constraints>
@@ -3760,7 +3756,7 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleAspectFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Lzi-HG-Ieu">
-                                                <rect key="frame" x="8" y="771" width="260" height="50"/>
+                                                <rect key="frame" x="8" y="685" width="260" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U46-lS-VIy">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -3799,7 +3795,7 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Additional Comments? Where can improvements be made?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ou4-Tx-1FA">
-                                                <rect key="frame" x="8" y="841" width="382" height="35"/>
+                                                <rect key="frame" x="8" y="755" width="382" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="kxX-cG-xCd"/>
                                                 </constraints>
@@ -3808,7 +3804,7 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="781-C4-07f">
-                                                <rect key="frame" x="8" y="886" width="382" height="126"/>
+                                                <rect key="frame" x="8" y="800" width="382" height="126"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="126" id="Y7o-7G-5WR"/>
@@ -3878,7 +3874,6 @@ PROBLEM WITH MATERIAL/SERVICE VENDOR</string>
                     <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="additionalCommentsBox" destination="781-C4-07f" id="4rD-6J-GOZ"/>
-                        <outlet property="cautionPara" destination="6oy-pM-rcB" id="UHb-PN-3dQ"/>
                         <outlet property="dropDown" destination="dg6-8j-vc6" id="zk6-Cb-hOj"/>
                         <outlet property="fifthButton" destination="8hT-F4-Y1F" id="C38-RZ-mm4"/>
                         <outlet property="fifthPara" destination="Mdh-K1-izz" id="0KT-eI-i69"/>
@@ -3947,6 +3942,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeR-QU-zV0">
@@ -4572,6 +4568,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QZY-Nd-ecm">
@@ -4878,6 +4875,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4L-Wk-Hi6">
@@ -5070,6 +5068,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-wd-YtP">
@@ -5482,6 +5481,7 @@ Score out of 5 (highest score is 5)</string>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="arrowColor">
                                                         <color key="value" red="0.54745542999999997" green="0.082735396919999996" blue="0.082402862610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSearchEnable" value="NO"/>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-jk-l8H">

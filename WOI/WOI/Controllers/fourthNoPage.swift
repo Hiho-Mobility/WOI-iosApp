@@ -61,7 +61,9 @@ class fourthNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         ref = Database.database().reference()
 
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
         navigationItem.title = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
 
@@ -123,6 +125,14 @@ class fourthNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         self.navigationController?.popToRootViewController(animated: true)
         
     }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+               self.view.frame.origin.y = -150 // Move view 150 points upward
+          }
+
+       @objc func keyboardWillHide(sender: NSNotification) {
+               self.view.frame.origin.y = 0 // Move view to original position
+          }
     
     func setNext(val:String?) -> Void {
         if (val == "1" || val == "2" || val == "3" || val == "4" || val == "5" ){

@@ -38,6 +38,10 @@ class secondNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
         
         ref = Database.database().reference()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
              
         additionalCommentsBox.delegate = self
         additionalCommentsBox.text = "Additional Comments"
@@ -147,6 +151,14 @@ class secondNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     }
     
+    @objc func keyboardWillShow(sender: NSNotification) {
+               self.view.frame.origin.y = -150 // Move view 150 points upward
+          }
+
+    @objc func keyboardWillHide(sender: NSNotification) {
+               self.view.frame.origin.y = 0 // Move view to original position
+          }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
         
@@ -172,6 +184,7 @@ class secondNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigat
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+    
     
     @IBAction func nextButtonClick(_ sender: Any) {
      

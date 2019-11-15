@@ -32,7 +32,6 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
     @IBOutlet var secondPara: UILabel!
     @IBOutlet var thirdPara: UILabel!
     @IBOutlet var forthPara: UILabel!
-    @IBOutlet var cautionPara: UILabel!
     @IBOutlet var fifthPara: UILabel!
     
     
@@ -63,6 +62,9 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(homeButtonTapped))
 
         ref = Database.database().reference()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
     
         additionalCommentsBox.delegate = self
         additionalCommentsBox.text = "Additional Comments"
@@ -71,10 +73,6 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         noBorderBox.layer.borderWidth = 2
         noBorderBox.layer.borderColor = UIColor.gray.cgColor
         noBorderBox.layer.cornerRadius = 5
-        
-        cautionPara.layer.borderColor = UIColor.gray.cgColor
-        cautionPara.layer.borderWidth = 1
-        cautionPara.layer.cornerRadius = 5
         
         dropDownValueSecond = ""
         self.setNext(val: dropDownValueThird)
@@ -129,6 +127,13 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         }
     }
     
+    @objc func keyboardWillShow(sender: NSNotification) {
+               self.view.frame.origin.y = -150 // Move view 150 points upward
+          }
+
+       @objc func keyboardWillHide(sender: NSNotification) {
+               self.view.frame.origin.y = 0 // Move view to original position
+          }
    
     @IBAction func firstButtonPressed(_ sender: Any) {
         
@@ -276,20 +281,18 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         let fontSize2 = self.secondPara.getFontSizeForLabel()
         let fontSize3 = self.thirdPara.getFontSizeForLabel()
         let fontSize4 = self.forthPara.getFontSizeForLabel()
-        let fontSize5 = self.cautionPara.getFontSizeForLabel()
         let fontSize6 = self.fifthPara.getFontSizeForLabel()
         
         
         print(fontSize1)
         print(fontSize2)
         print(fontSize3)
-        let smallestFontSize = min(min(min(min(min(fontSize1, fontSize2), fontSize3), fontSize4), fontSize5), fontSize6)
+        let smallestFontSize = min(min(min(min(fontSize1, fontSize2), fontSize3), fontSize4), fontSize6)
 
         self.firstPara.font = self.firstPara.font.withSize(smallestFontSize)
         self.secondPara.font = self.secondPara.font.withSize(smallestFontSize)
         self.thirdPara.font = self.thirdPara.font.withSize(smallestFontSize)
         self.forthPara.font = self.forthPara.font.withSize(smallestFontSize)
-        self.cautionPara.font = self.cautionPara.font.withSize(smallestFontSize)
         self.fifthPara.font = self.fifthPara.font.withSize(smallestFontSize)
         
         
@@ -298,7 +301,6 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         self.secondPara.adjustsFontSizeToFitWidth = false
         self.thirdPara.adjustsFontSizeToFitWidth = false
         self.forthPara.adjustsFontSizeToFitWidth = false
-        self.cautionPara.adjustsFontSizeToFitWidth = false
         self.fifthPara.adjustsFontSizeToFitWidth = false
         
         
