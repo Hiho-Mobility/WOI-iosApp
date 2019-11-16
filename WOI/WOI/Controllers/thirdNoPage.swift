@@ -311,7 +311,7 @@ class thirdNoPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
         
         
         
-        self.inputVals["The work performed was of Stanford,Facilities Operations and Trade Specific quality?"] = dropDownValueThird
+        self.inputVals["The work performed was of Stanford, Facilities Operations and Trade Specific quality?"] = dropDownValueThird
         self.inputVals["Additional Comments"] = additionalCommentsBox.text
         
         if additionalCommentsBox.text == "Additional Comments"{

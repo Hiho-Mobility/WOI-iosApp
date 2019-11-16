@@ -187,7 +187,7 @@ class thirdNAPage: UIViewController, UIImagePickerControllerDelegate, UINavigati
      
      
     
-        self.inputVals["The work performed was of Stanford,Facilities Operations and Trade Specific quality?"] = "N/A"
+        self.inputVals["The work performed was of Stanford, Facilities Operations and Trade Specific quality?"] = "N/A"
         self.inputVals["Additional Comments"] = additionalCommentsBox.text
         
         if additionalCommentsBox.text == "Additional Comments"{
